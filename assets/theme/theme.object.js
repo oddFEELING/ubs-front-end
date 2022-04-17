@@ -22,7 +22,7 @@ const ThemeObj = {
       sm: `.8rem`,
       md: `1.1rem`,
       lg: `1.6rem`,
-      xl: `2.3rem`,
+      xl: `2.5rem`,
       xxl: `5rem`,
     },
   },

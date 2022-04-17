@@ -98,3 +98,25 @@ export const TopSectionData = [
     bg: (theme) => theme.alpha('clr_3', 0.55),
   },
 ];
+
+// ======= #facility -->
+export const facilityData = [
+  {
+    icon: `emojione-monotone:money-bag`,
+    title: `Affordable Fees`,
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.`,
+    delay: 0,
+  },
+  {
+    icon: `carbon:report`,
+    title: `Standard laboratories`,
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.`,
+    delay: 100,
+  },
+  {
+    icon: `emojione-monotone:trophy`,
+    title: `Excellent track record`,
+    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.`,
+    delay: 200,
+  },
+];

@@ -16,7 +16,8 @@ export default function Home() {
     AOS.init({
       disable: 'phone',
       delay: 0,
-      offset: 0,
+      offset: 50,
+      disable: 'phone',
       duration: 800,
     });
   });

@@ -2,10 +2,11 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { css } from 'styled-components';
 
 //=============================================>  COMPONENT
 const Separator = ({ ...props }) => {
-  const { right, left, top, bottom, width, height, delay } = props;
+  const { right, left, top, bottom, width, height, delay, red } = props;
 
   return (
     <Container
@@ -17,6 +18,7 @@ const Separator = ({ ...props }) => {
       height={height}
       data-aos='zoom-out-right'
       data-aos-delay={delay}
+      red={red}
     />
   );
 };
@@ -34,4 +36,10 @@ const Container = styled.span`
   margin-right: ${({ right }) => right};
   margin-bottom: ${({ bottom }) => bottom};
   background-color: ${({ theme }) => theme.colors.clr_4};
+
+  ${({ red }) =>
+    red &&
+    css`
+      background-color: ${({ theme }) => theme.colors.clr_1};
+    `}
 `;
