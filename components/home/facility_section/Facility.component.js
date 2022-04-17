@@ -48,6 +48,7 @@ export const ListWrapper = styled.div`
   flex-direction: column;
 `;
 
+// ======= list container -->
 export const ListItem = styled.div`
   height: auto;
   width: 100%;
@@ -58,6 +59,7 @@ export const ListItem = styled.div`
   justify-content: space-between;
 `;
 
+// ======= text area  -->
 export const ListTextWrapper = styled.div`
   width: 85%;
   gap: 2vh;
@@ -66,18 +68,25 @@ export const ListTextWrapper = styled.div`
   justify-content: space-between;
 `;
 
+// ======= title for item -->
 export const ListTitle = styled.h3`
   font-weight: 500;
   font-size: ${({ theme }) => theme.fonts.size.lg};
   color: ${({ theme }) => theme.colors.lt_1};
 `;
 
+// ======= text content  -->
 export const ListContent = styled.p`
   font-size: ${({ theme }) => theme.fonts.size.md};
   font-family: ${({ theme }) => theme.fonts.sec};
   color: ${({ theme }) => theme.alpha('lt_2', 0.7)};
 
-  @media (max-width: 800px) {
+  @media (max-width: 1440px) {
     font-size: ${({ theme }) => theme.fonts.size.sm};
+    width: 70%;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
   }
 `;
