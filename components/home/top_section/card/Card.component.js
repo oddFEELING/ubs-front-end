@@ -27,8 +27,8 @@ const Container = styled.div`
   gap: 10%;
   display: flex;
   padding: 10% 2%;
-  border-radius: 8px;
   text-align: center;
+  border-radius: 8px;
   align-items: center;
   flex-direction: column;
   width: max(250px, 20vw);

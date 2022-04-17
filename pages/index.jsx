@@ -8,17 +8,18 @@ import HomeHero from '../components/home/hero/HomeHero';
 import TopSection from '../components/home/top_section/TopSection';
 import Equip from '../components/home/equip_section/Equip';
 import Facility from '../components/home/facility_section/Facility';
+import Offer from '../components/home/offer_section/Offer';
 
 //=============================================>  COMPONENT
 export default function Home() {
   // ======= effect to initialize libs -->
   useEffect(() => {
     AOS.init({
-      disable: 'phone',
       delay: 0,
+      once: true,
       offset: 50,
-      disable: 'phone',
       duration: 800,
+      disable: 'phone',
     });
   });
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       <TopSection />
       <Equip />
       <Facility />
+      <Offer />
     </S.Container>
   );
 }

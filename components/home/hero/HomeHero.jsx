@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Container } from './homeHero.component';
 import Slide from './slide/Slide.component';
 import { SlideData } from '../../../data/home.data';
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper';
+import { Autoplay, EffectFade } from 'swiper';
 
 //=============================================>  COMPONENT
 const HomeHero = () => {
@@ -19,17 +19,15 @@ const HomeHero = () => {
   // ======= Swiper options-->
   const SwiperOpt = {
     autoplay: true,
-    pagination: { clickable: true },
     loop: true,
-    speed: 1500,
-    navigation: true,
+    speed: 3000,
     allowTouchMove: false,
   };
 
   return (
     <Container>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay, EffectFade]}
+        modules={[Autoplay, EffectFade]}
         {...SwiperOpt}
         effect='fade'
         style={{ ...SwiperStyle }}
