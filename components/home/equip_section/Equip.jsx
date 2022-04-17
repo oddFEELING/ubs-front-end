@@ -31,19 +31,17 @@ const Equip = () => {
         <Image src={Shape_2} alt='' className='shape__1' />
       </Shape__2>
 
-      {/* ====== image area */}
+      {/* ====== image  */}
       <ImgWrapper>
         <Image src={EquipImg} alt='' layout='fill' className='img' />
       </ImgWrapper>
 
-      {/* ====== text wrapper */}
+      {/* ====== text  */}
       <TextWrapper>
-        {/* ====== title */}
         <Title data-aos='fade-left'>
           Equip your Kids with On-demand Skills
         </Title>
 
-        {/* ====== separator */}
         <Separator
           height='5px'
           width='8vw'
@@ -52,7 +50,6 @@ const Equip = () => {
           delay='500'
         />
 
-        {/* ====== content */}
         <Content data-aos='fade-left' data-aos-delay='200'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
           vulputate libero et velit interdum, ac aliquet odio mattis. Class
@@ -64,7 +61,7 @@ const Equip = () => {
           inceptos himenaeos. Curabitur tempus urna at turpis condimentum
           lobortis.
         </Content>
-        {/* ====== Button */}
+
         <Button
           text='Enquiries'
           color={theme.colors.lt_1}

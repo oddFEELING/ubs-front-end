@@ -19,9 +19,10 @@ const Facility = () => {
   return (
     <Container>
       <ContentWrapper>
-        {/* ====== title section */}
+        {/* ====== title  */}
         <Title data-aos='fade-right'>Our Facilities</Title>
         <Separator width='7vw' height='5px' left='-2vw' top='-2vh' red />
+
         {/* ====== list */}
         <ListWrapper>
           {facilityData &&

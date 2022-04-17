@@ -10,16 +10,9 @@ const Card = ({ ...props }) => {
   const { title, icon, content, bg, sx, delay } = props;
   return (
     <Container style={sx} bg={bg} data-aos='fade-up' data-aos-delay={delay}>
-      {/* ====== icon */}
       <Icon icon={icon} color='white' height='60' />
-
-      {/* ====== title */}
       <Title>{title}</Title>
-
-      {/* ====== content */}
       <Content>{content}</Content>
-
-      {/* ====== link */}
       <Link href='' passHref>
         <a>Learn more</a>
       </Link>

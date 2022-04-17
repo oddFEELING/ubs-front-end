@@ -10,16 +10,11 @@ const Slide = ({ ...props }) => {
 
   return (
     <Container img={img}>
-      {/* ====== text area */}
       <TextArea>
-        {/* ====== title  */}
         <Title>{title && title}</Title>
-
-        {/* ====== tag line */}
         <Desc>{desc && desc}</Desc>
       </TextArea>
 
-      {/* ====== byutton section */}
       <BtnArea>
         {buttons &&
           buttons.map((data, index) => {
