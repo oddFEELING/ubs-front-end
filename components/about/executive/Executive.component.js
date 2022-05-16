@@ -93,6 +93,7 @@ const TitleCard = styled.div`
 
   p {
     font-weight: 500;
+    font-family: ${({ theme }) => theme.fonts.sec};
     font-size: ${({ theme }) => theme.fonts.size.sm};
   }
 `;
