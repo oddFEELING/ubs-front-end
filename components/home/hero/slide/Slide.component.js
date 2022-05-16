@@ -55,6 +55,7 @@ const Container = styled.div`
   background-position: center;
   flex-direction: column;
   justify-content: center;
+  background-color: black;
   padding: max(12vh, 80px) 16vw;
 
   @media screen and (max-width: 800px) {

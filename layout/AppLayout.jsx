@@ -1,6 +1,7 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
+import Footer from '../components/lib/footer/Footer';
 import Nav from '../components/lib/navbar/Nav';
 
 //=============================================>  COMPONENT
@@ -9,7 +10,7 @@ const AppLayout = ({ children }) => {
     <div>
       <Nav />
       {children}
-      <h1>Footer</h1>
+      <Footer />
     </div>
   );
 };

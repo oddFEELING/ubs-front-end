@@ -9,6 +9,8 @@ import TopSection from '../components/home/top_section/TopSection';
 import Equip from '../components/home/equip_section/Equip';
 import Facility from '../components/home/facility_section/Facility';
 import Offer from '../components/home/offer_section/Offer';
+import Testimony from '../components/home/testimony_section/Testimony';
+import Register from '../components/home/register/Register';
 
 //=============================================>  COMPONENT
 export default function Home() {
@@ -35,6 +37,8 @@ export default function Home() {
       <Equip />
       <Facility />
       <Offer />
+      <Testimony />
+      <Register />
     </S.Container>
   );
 }
