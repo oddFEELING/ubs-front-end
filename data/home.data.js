@@ -5,7 +5,7 @@ export const SlideData = [
   {
     title: `Unique Blossom Schools`,
     desc: `Leadership and Knowledge`,
-    img: '/hero/hero-img-1.JPG',
+    img: '/hero/hero-img-1.jpg',
     buttons: [
       {
         text: `Enquiries`,
