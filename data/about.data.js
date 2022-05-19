@@ -7,19 +7,46 @@ export const valueData = [
   {
     icon: 'icon-park-outline:target',
     title: 'Our Mission',
+    delay: 0,
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id sit sit quis tempor orci sed.',
   },
   {
     icon: 'icons8:idea',
     title: 'Our Vision',
+    delay: 200,
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id sit sit quis tempor orci sed.',
   },
   {
     icon: 'ant-design:bar-chart-outlined',
     title: 'Our Core values',
+    delay: 400,
     content:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id sit sit quis tempor orci sed.',
+  },
+];
+
+export const ExecutiveData = [
+  {
+    image:
+      'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+    name: 'Dr. Aimasiko',
+    title: 'Principal',
+    delay: 0,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500',
+    name: 'Chief Balogun',
+    title: 'Founder',
+    delay: 300,
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    name: 'Mrs Deborah',
+    title: 'Head of School',
+    delay: 600,
   },
 ];

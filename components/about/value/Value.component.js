@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Icon } from '@iconify/react';
+import Separator from '../../lib/separator/Separator.component';
 import { valueData } from '../../../data/about.data';
 import styled from 'styled-components';
 
@@ -10,12 +11,18 @@ const ValueComponent = () => {
   return (
     <Container>
       <Title> Some of the things we value</Title>
+      <Separator width='120px' height='6px' red top='-3vh' />
       <CardWrapper>
         {valueData &&
           valueData.map((item, index) => {
             const areaStyle = `card_${index + 1}`;
             return (
-              <CardBox key={index} style={{ area: areaStyle }}>
+              <CardBox
+                key={index}
+                style={{ area: areaStyle }}
+                data-aos='fade-right'
+                data-aos-delay={item.delay}
+              >
                 <Icon icon={item.icon} color='white' height='40' />
                 <h4>{item.title}</h4>
                 <p>{item.content}</p>

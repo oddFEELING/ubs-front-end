@@ -3,26 +3,26 @@
 export const Nav_Links = [
   {
     text: `Home`,
-    link: ``,
+    link: `/`,
   },
   {
     text: `About Us`,
-    link: ``,
+    link: `/about`,
   },
   {
     text: `Gallery`,
-    link: ``,
+    link: `/gallery`,
   },
   {
     text: `Blog`,
-    link: ``,
+    link: `/blog`,
   },
   {
     text: `Contact`,
-    link: ``,
+    link: `/contact`,
   },
   {
     text: `Login`,
-    link: ``,
+    link: `/login`,
   },
 ];
