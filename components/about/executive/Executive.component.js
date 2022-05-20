@@ -87,12 +87,13 @@ const ExecCard = styled.div`
   display: flex;
   position: relative;
   align-items: center;
+  border-radius: 10px;
   background-color: red;
   justify-content: center;
   box-shadow: 5px 5px 0 ${({ theme }) => theme.colors.lt_2},
     10px 10px 0 ${({ theme }) => theme.colors.clr_2},
     15px 15px 0 ${({ theme }) => theme.colors.lt_2},
-    20px 20px 0 ${({ theme }) => theme.colors.clr_4};
+    20px 20px 0 ${({ theme }) => theme.colors.clr_5};
 `;
 
 const Title = styled.h2`
