@@ -84,7 +84,9 @@ const Nav = () => {
           {Nav_Links.map((data, index) => {
             return (
               <Link href={data.link} key={index} passHref>
-                <a className='link'>{data.text}</a>
+                <a className='link' onClick={() => setIsOpen(false)}>
+                  {data.text}
+                </a>
               </Link>
             );
           })}
