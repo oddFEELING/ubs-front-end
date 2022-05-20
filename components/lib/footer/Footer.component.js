@@ -97,10 +97,16 @@ export const SubscribeDiv = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 20px;
-  grid-area: card_2;
-  background-color: cyan;
-  border-left: thin solid ${({ theme }) => theme.colors.lt_1};
+  padding: 50px;
+  align-items: center;
+  color: ${({ theme }) => theme.colors.lt_1};
+
+  .news-letter-wrapper {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    border-left: thin solid ${({ theme }) => theme.colors.lt_1};
+  }
 `;
 
 // ======= socials secction -->
@@ -118,9 +124,9 @@ export const SocialDiv = styled.div`
   .icon-wrapper {
     display: flex;
     padding: 10px;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     transition: ${({ theme }) => theme.transition.smooth};
     border: 2px solid ${({ theme }) => theme.colors.clr_2};
 

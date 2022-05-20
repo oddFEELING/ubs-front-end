@@ -62,7 +62,9 @@ const Footer = () => {
             })}
         </ContactDiv>
 
-        <SubscribeDiv></SubscribeDiv>
+        <SubscribeDiv>
+          <h1>Newsletter Coming soon!</h1>
+        </SubscribeDiv>
 
         <SocialDiv>
           <h1>Socials</h1>
