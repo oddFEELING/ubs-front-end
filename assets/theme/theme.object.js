@@ -37,8 +37,8 @@ const ThemeObj = {
     sd_1: `0 2px 4px rgba(0,0,0,0.05)`,
     sd_2: `0 3px 9px rgba(0,0,0,0.1)`,
     sd_3: `.5px 4px 16px rgba(0,0,0,0.15)`,
-    sd_4: `1 7px 22px rgba(0,0,0,0.2)`,
-    sd_5: `2 8px 35px rgba(0,0,0,0.25)`,
+    sd_4: `1px 7px 22px rgba(0,0,0,0.2)`,
+    sd_5: `2px 8px 35px rgba(0,0,0,0.25)`,
   },
 };
 

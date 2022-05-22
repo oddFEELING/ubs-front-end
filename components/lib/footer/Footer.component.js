@@ -131,7 +131,7 @@ export const SocialDiv = styled.div`
     border: 2px solid ${({ theme }) => theme.colors.clr_2};
 
     &:hover {
-      transform: rotate(-10deg) translateY(-5px) scale(1.03);
+      transform: translateY(-5px) scale(1.03);
       border: 2px solid ${({ theme }) => theme.alpha('lt_1', 0.7)};
     }
   }

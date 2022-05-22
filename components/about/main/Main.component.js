@@ -68,7 +68,7 @@ const Content = styled.div`
 `;
 
 const Txt = styled.p`
-  width: 50%;
+  width: 550px;
   padding: 20px 50px;
   font-size: ${({ theme }) => theme.fonts.size.md};
 
@@ -79,7 +79,7 @@ const Txt = styled.p`
 `;
 
 const ImgDiv = styled.div`
-  width: 40%;
+  width: 35%;
   height: 500px;
   display: flex;
   position: relative;
