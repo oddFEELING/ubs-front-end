@@ -37,7 +37,6 @@ export const LogoDiv = styled.div`
 export const MiddleSection = styled.div`
   gap: 40px;
   width: 100%;
-  height: 350px;
   display: grid;
   padding: 0 150px;
   align-items: center;
@@ -47,6 +46,14 @@ export const MiddleSection = styled.div`
     'card_1 card_3';
   align-items: center;
   justify-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-areas:
+      'card_1'
+      'card_2'
+      'card_3';
+    padding: 0 20px;
+  }
 `;
 
 // ======= Contact section -->
@@ -62,6 +69,10 @@ export const ContactDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border-left: thin solid ${({ theme }) => theme.colors.lt_1};
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const ContactCard = styled.div`
@@ -69,6 +80,11 @@ export const ContactCard = styled.div`
   width: 100%;
   height: auto;
   display: flex;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: 100px;
+  }
 `;
 
 export const ContactText = styled.span`
@@ -106,6 +122,10 @@ export const SubscribeDiv = styled.div`
     height: 80%;
     display: flex;
     border-left: thin solid ${({ theme }) => theme.colors.lt_1};
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
   }
 `;
 
