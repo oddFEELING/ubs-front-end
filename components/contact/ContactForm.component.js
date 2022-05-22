@@ -13,17 +13,22 @@ const ContactFormComponent = () => {
     <Container>
       <InputWrapper>
         <p>Name</p>
-        <InpTxt type='text' placeholder='Enter your name...' />
+        <InpTxt type='text' placeholder='Enter your name' />
       </InputWrapper>
 
       <InputWrapper>
         <p>Email</p>
-        <InpTxt type='email' placeholder='Enter your email...' />
+        <InpTxt type='email' placeholder='Enter your email' />
       </InputWrapper>
 
       <InputWrapper>
         <p>Your Message</p>
-        <InpArea type='text' placeholder='Enter your message...' />
+        <InpArea
+          type='text'
+          placeholder={
+            'Say something...\n > ☎️Make enquiries\n > 📜Submit complaints\n > ❔Get help\n > 👋Say HI!'
+          }
+        />
       </InputWrapper>
 
       <Button
@@ -71,10 +76,12 @@ const InpTxt = styled.input`
   width: 100%;
   height: 60px;
   border: none;
-  font-weight: 300;
   padding: 15px;
+  font-weight: 300;
   border-radius: 5px;
+  letter-spacing: 1px;
   color: ${({ theme }) => theme.colors.lt_2};
+  font-family: ${({ theme }) => theme.fonts.sec};
   font-size: ${({ theme }) => theme.fonts.size.md};
   background-color: ${({ theme }) => theme.colors.clr_5};
   transition: ${({ theme }) => theme.transition.smooth};
@@ -82,19 +89,29 @@ const InpTxt = styled.input`
   &:focus {
     outline: thin solid ${({ theme }) => theme.alpha('lt_2', 0.7)};
   }
+
+  &::placeholder {
+    color: ${({ theme }) => theme.alpha('lt_2', 0.4)};
+  }
 `;
 
 const InpArea = styled.textarea`
   width: 100%;
   border: none;
   height: 300px;
-  padding: 15px;
+  padding: 20px;
   border-radius: 5px;
+  letter-spacing: 1px;
   color: ${({ theme }) => theme.colors.lt_2};
+  font-family: ${({ theme }) => theme.fonts.sec};
   font-size: ${({ theme }) => theme.fonts.size.md};
   background-color: ${({ theme }) => theme.colors.clr_5};
 
   &:focus {
     outline: thin solid ${({ theme }) => theme.alpha('lt_2', 0.7)};
+  }
+
+  &::placeholder {
+    color: ${({ theme }) => theme.alpha('lt_2', 0.4)};
   }
 `;
