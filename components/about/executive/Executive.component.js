@@ -94,6 +94,10 @@ const ExecCard = styled.div`
     10px 10px 0 ${({ theme }) => theme.colors.clr_2},
     15px 15px 0 ${({ theme }) => theme.colors.lt_2},
     20px 20px 0 ${({ theme }) => theme.colors.clr_5};
+
+  @media (max-width: 480px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h2`
