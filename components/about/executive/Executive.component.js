@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 import { useTheme } from 'styled-components';
 import { ExecutiveData } from '../../../data/about.data';
 import Separator from '../../lib/separator/Separator.component';
@@ -10,6 +11,7 @@ import ButtonComponent from '../../lib/button/Button.component';
 
 //=============================================>  RENDER
 const ExecutiveComponent = () => {
+  const router = useRouter();
   const theme = useTheme();
 
   return (
@@ -43,6 +45,7 @@ const ExecutiveComponent = () => {
         hv_bg={theme.colors.clr_2}
         color={theme.colors.lt_2}
         text='view all'
+        onClick={() => router.push('about/executives')}
       />
     </Container>
   );

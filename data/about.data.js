@@ -34,6 +34,7 @@ export const ExecutiveData = [
     name: 'Dr. Aimasiko',
     title: 'Principal',
     delay: 0,
+    left: true,
   },
   {
     image:
@@ -48,5 +49,6 @@ export const ExecutiveData = [
     name: 'Mrs Deborah',
     title: 'Head of School',
     delay: 600,
+    left: true,
   },
 ];

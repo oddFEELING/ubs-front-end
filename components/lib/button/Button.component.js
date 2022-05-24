@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 //=============================================>  COMPONENT
 const Button = ({ ...props }) => {
-  const { text, bg, color, hv_bg, hv_color, sx } = props;
+  const { text, bg, color, hv_bg, hv_color, sx, onClick } = props;
   return (
     <Container
       bg={bg}
@@ -13,6 +13,7 @@ const Button = ({ ...props }) => {
       hv_color={hv_color}
       hv_bg={hv_bg}
       style={sx}
+      onClick={onClick}
     >
       {text}
     </Container>

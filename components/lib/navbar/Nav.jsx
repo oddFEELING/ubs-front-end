@@ -8,6 +8,7 @@ import { Icon } from '@iconify/react';
 import useScroll from '../../../hooks/useScroll';
 import useMobile from '../../../hooks/useMobile';
 import { Nav_Links } from '../../../data/nav.data';
+import { navStore } from '../../../context/nav.context';
 import logoImg from '../../../assets/images/logo/logo.jpg';
 // ======= style import  -->
 import {
@@ -21,6 +22,7 @@ import {
 
 //=============================================>  COMPONENT
 const Nav = () => {
+  const { current_route, setCurrent_route } = navStore();
   // ======= mobile menu state -->
   const [isOpen, setIsOpen] = useState(false);
   // ======= check for mobile screen -->
@@ -53,7 +55,14 @@ const Nav = () => {
           {Nav_Links.map((data, index) => {
             return (
               <Link href={data.link} key={index} passHref>
-                <a className={scrolled ? 'scrolled link' : 'link'}>
+                <a
+                  slc={true}
+                  className={scrolled ? `scrolled link` : `link`}
+                  onClick={() => {
+                    setCurrent_route(data.select);
+                    console.log(current_route);
+                  }}
+                >
                   {data.text}
                 </a>
               </Link>

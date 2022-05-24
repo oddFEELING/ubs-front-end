@@ -12,6 +12,7 @@ export const Container = styled.div`
   align-items: center;
   height: max(13vh, 85px);
   justify-content: space-between;
+  font-family: ${({ theme }) => theme.fonts.sec};
   transition: ${({ theme }) => theme.transition.smooth};
 
   // ======= scrolled -->
@@ -21,14 +22,32 @@ export const Container = styled.div`
       padding: 0.5vh 8vw;
       height: max(8vh, 60px);
       backdrop-filter: blur(5px);
-      color: ${({ theme }) => theme.colors.dk_1};
+      color: ${({ theme, slc }) => (slc ? `#4BC7E2 ` : theme.colors.dk_1)};
       background-color: ${({ theme }) => theme.alpha('lt_1', 0.8)};
     `}
 
   .link {
     font-weight: 500;
-    color: ${({ theme }) => theme.colors.lt_1};
+    padding-bottom: 8px;
+    position: relative;
+    color: ${({ theme, slc }) =>
+      slc ? theme.colors.clr_2 : theme.colors.lt_1};
     font-size: ${({ theme }) => theme.fonts.size.md};
+
+    &::after {
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2.5px;
+      position: absolute;
+      transition: ${({ theme }) => theme.transition.smooth};
+      background-color: #4bc7e2;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 `;
 
@@ -58,7 +77,6 @@ export const DesktopLinkDiv = styled.nav`
 `;
 
 // ======= mobile nav -->
-
 export const NavBtn = styled.div`
   height: 80%;
   display: flex;
@@ -93,6 +111,7 @@ export const MobileLinkDiv = styled.nav`
     `}
 
   .link {
+    position: relative;
     font-size: ${({ theme }) => theme.fonts.size.lg};
   }
 `;
