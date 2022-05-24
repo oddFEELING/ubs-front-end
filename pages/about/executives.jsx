@@ -8,7 +8,7 @@ import Hero from '../../components/lib/hero/Hero.component';
 import ExecCardComponent from '../../components/executive/ExecCard.component';
 import { Container } from '../../styles/about/execPage.component';
 
-const executives = () => {
+const Executives = () => {
   useEffect(() => {
     AOS.init({
       delay: 0,
@@ -52,4 +52,4 @@ const executives = () => {
   );
 };
 
-export default executives;
+export default Executives;
