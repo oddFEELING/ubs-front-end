@@ -5,8 +5,8 @@ import Head from 'next/head';
 import React, { useEffect } from 'react';
 import { ExecutiveData } from '../../data/about.data';
 import Hero from '../../components/lib/hero/Hero.component';
-import ExecCardComponent from '../../components/executive/ExecCard.component';
 import { Container } from '../../styles/about/execPage.component';
+import ExecCardComponent from '../../components/executive/ExecCard.component';
 
 const Executives = () => {
   useEffect(() => {

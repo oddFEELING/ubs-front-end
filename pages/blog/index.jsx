@@ -1,7 +1,7 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
-import Hero from '../components/lib/hero/Hero.component';
+import Hero from '../../components/lib/hero/Hero.component';
 
 const Blog = () => {
   return (

@@ -14,12 +14,12 @@ export const Nav_Links = [
   {
     text: `Gallery`,
     select: `gallery`,
-    link: `/Gallery`,
+    link: `/gallery`,
   },
   {
     text: `Blog`,
     select: `blog`,
-    link: `/Blog`,
+    link: `/blog`,
   },
   {
     text: `Contact`,
