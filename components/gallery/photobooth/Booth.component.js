@@ -28,13 +28,14 @@ const BoothComponent = () => {
     >
       {ImageData &&
         ImageData.map((image, index) => {
-          const cols = image.featured ? 2 : 1;
-          const rows = image.featured ? 2 : 1;
+          console.log(
+            `${image.title} has ${image.columns} x ${image.rows} dimension`
+          );
           return (
             <ImageListItem
               key={index}
-              rows={rows}
-              cols={cols}
+              rows={image.rows}
+              cols={image.columns}
               data-aos='fade-up'
             >
               <Image
@@ -43,6 +44,7 @@ const BoothComponent = () => {
                 loading='lazy'
                 src={image.img}
                 objectFit='cover'
+                placeholder={image.img}
               />
 
               <ImageListItemBar
