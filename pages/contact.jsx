@@ -27,6 +27,7 @@ const Contact = () => {
         title='Get in Touch'
         btn_1_txt='Enquiries'
         btn_2_txt='Admissions'
+        img='/contact/contact-hero.JPG'
         desc='Choose the most suitable way to reach out to us'
       />
       <ContactCardComponent />

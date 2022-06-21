@@ -5,7 +5,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { AboutCopy } from '../../../data/about.data';
 import Separator from '../../lib/separator/Separator.component';
-import CopyImg from '../../../assets/images/about/about-copy-img.jpeg';
+import CopyImg from '../../../assets/images/about/about-copy-img.JPG';
 
 //=============================================>  # RENDER
 const Main = () => {
@@ -21,6 +21,7 @@ const Main = () => {
             alt=''
             layout='fill'
             placeholder='blur'
+            blurDataURL={AboutCopy}
             loading='lazy'
             objectFit='cover'
             objectPosition='top'

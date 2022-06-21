@@ -32,14 +32,16 @@ const useMobile = () => {
 
     // ======= add listeners -->
     window.addEventListener('load', watcher);
-    window.addEventListener('resize', watcher);
     window.addEventListener('focus', watcher);
+    window.addEventListener('resize', watcher);
+    window.addEventListener('hashchange', watcher);
 
     // ======= cleanup -->
     return () => {
       window.removeEventListener('load', watcher);
-      window.removeEventListener('resize', watcher);
       window.removeEventListener('focus', watcher);
+      window.removeEventListener('resize', watcher);
+      window.removeEventListener('hashchange', watcher);
     };
   });
 

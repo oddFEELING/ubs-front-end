@@ -6,17 +6,27 @@ import Button from '../button/Button.component';
 
 //=============================================>  # RENDER
 const Hero = ({ ...props }) => {
-  const { btn_1_click, btn_2_click, btn_1_txt, btn_2_txt, bg, title, desc } =
+  const { btn_1_click, btn_2_click, btn_1_txt, btn_2_txt, img, title, desc } =
     props;
   return (
-    <Container>
+    <Container img={img}>
       <Title data-aos='fade-up'>{title}</Title>
       <Desc data-aos='fade-up' data-aos-delay='300'>
         {desc}
       </Desc>
       <BtnArea>
-        <Button text={btn_1_txt} bg='#E72727' color='#f3f4ff' />
-        <Button text={btn_2_txt} bg='#f3f4ff' color='#1A1A1A' />
+        <Button
+          text={btn_1_txt}
+          bg='#E72727'
+          color='#f3f4ff'
+          onClick={btn_1_click}
+        />
+        <Button
+          text={btn_2_txt}
+          bg='#f3f4ff'
+          color='#1A1A1A'
+          onClick={btn_2_click}
+        />
       </BtnArea>
     </Container>
   );

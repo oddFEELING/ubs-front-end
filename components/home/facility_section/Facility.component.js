@@ -9,7 +9,8 @@ export const Container = styled.section`
   height: max(700px, 100vh);
   align-items: center;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('/hero/facility-img.JPG');
+    url('/home/facility-img.JPG');
+  /* background-attachment: fixed; */
   background-size: cover;
   background-position: center;
 `;

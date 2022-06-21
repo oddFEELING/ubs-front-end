@@ -6,17 +6,18 @@ import { css } from 'styled-components';
 import { galleryStore } from '../../../context/gallery.context';
 
 //=============================================>  RENDER
-const TagComponent = ({ text, value }) => {
+const TagComponent = ({ text }) => {
   const { setSelected, selected } = galleryStore();
 
   // ======= Tag click -->
   const handleClick = () => {
-    setSelected(value);
+    setSelected(text);
   };
 
   return (
     <Container
-      selected={selected === value ? true : false}
+      data-aos='slide-up'
+      selected={selected === text ? true : false}
       onClick={handleClick}
     >
       {text.toUpperCase()}
@@ -45,8 +46,6 @@ const Container = styled.div`
   &:hover {
     transform: translateY(-5px);
     box-shadow: ${({ theme }) => theme.shadow.sd_2};
-    background-color: ${({ theme, selected }) =>
-      !selected && theme.alpha('dk_2', 0.1)};
   }
 
   ${({ selected }) =>

@@ -1,62 +1,72 @@
 /** 🌹oddFEELING */
 
-import AOS from 'aos';
 import Image from 'next/image';
 import styled from 'styled-components';
+import { galleryStore } from '../../../context/gallery.context';
 import { ImageData } from '../../../data/gallery.data';
 import React, { useEffect, useState } from 'react';
-import useMobile from '../../../hooks/useMobile';
 import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 
 //=============================================>  RENDER
-const BoothComponent = () => {
-  const mobile = useMobile();
+const BoothComponent = ({ mobile }) => {
+  const { selected } = galleryStore();
+  const [ListProps, setListProps] = useState({
+    style: { width: '90%', overflow: 'hidden' },
+    cols: 4,
+    gap: 8,
+    rowHeight: 350,
+  });
+
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 0,
-      disable: 'mobile',
+    setListProps({
+      style: { width: mobile ? '100%' : '90%', overflow: 'hidden' },
+      cols: mobile ? 2 : 4,
+      gap: 8,
+      rowHeight: mobile ? 200 : 350,
     });
+
+    console.log(mobile);
   }, [mobile]);
 
   return (
     <ImageList
-      sx={{ width: mobile ? '100%' : '90%', overflow: 'hidden' }}
-      cols={mobile ? 2 : 4}
+      sx={{ ...ListProps.style }}
+      cols={ListProps.cols}
       gap={8}
-      rowHeight={mobile ? 200 : 350}
+      rowHeight={ListProps.rowHeight}
     >
       {ImageData &&
         ImageData.map((image, index) => {
-          console.log(
-            `${image.title} has ${image.columns} x ${image.rows} dimension`
-          );
           return (
-            <ImageListItem
-              key={index}
-              rows={image.rows}
-              cols={image.columns}
-              data-aos='fade-up'
-            >
-              <Image
-                alt={image.img}
-                layout='fill'
-                loading='lazy'
-                src={image.img}
-                objectFit='cover'
-                placeholder={image.img}
-              />
+            <React.Fragment key={index}>
+              {(image.category === selected || selected === 'all') && (
+                <ImageListItem
+                  key={index}
+                  rows={image.rows}
+                  cols={image.columns}
+                  data-aos='fade-up'
+                >
+                  <Image
+                    alt={image.img}
+                    layout='fill'
+                    loading='lazy'
+                    src={image.img}
+                    objectFit='cover'
+                    placeholder={image.img}
+                  />
 
-              <ImageListItemBar
-                sx={{
-                  background:
-                    'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-                    'rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
-                }}
-                title={`${image.title} by ${image.author}`}
-                position='top'
-              />
-            </ImageListItem>
+                  <ImageListItemBar
+                    sx={{
+                      background:
+                        'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
+                        'rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
+                    }}
+                    title={`${image.title} by ${image.author}`}
+                    position='top'
+                  />
+                </ImageListItem>
+              )}
+            </React.Fragment>
           );
         })}
     </ImageList>
@@ -64,9 +74,3 @@ const BoothComponent = () => {
 };
 
 export default BoothComponent;
-
-//=============================================>  COMPONENT
-const Container = styled.div`
-  width: 90%;
-  display: flex;
-`;

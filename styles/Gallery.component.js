@@ -13,8 +13,8 @@ export const Contaoiner = styled.div`
 export const GalleryWrapper = styled.section`
   gap: 8px;
   width: 100%;
-  min-height: 500px;
   display: flex;
+  min-height: 500px;
   padding: 50px 4px;
   align-items: center;
   flex-direction: column;

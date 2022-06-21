@@ -19,6 +19,7 @@ export const Container = styled.section`
       0.9
     )}),
     url('/home/testimony-bg.jpg')`};
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

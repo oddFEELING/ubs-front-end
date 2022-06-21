@@ -49,6 +49,7 @@ const Container = styled.section`
       'clr_4',
       0.9
     )}), url('/about/about-value.jpg')`};
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -2,7 +2,6 @@
 
 import AOS from 'aos';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import { MainBody } from '../../styles/about/about.component';
 import Hero from '../../components/lib/hero/Hero.component';
@@ -33,6 +32,7 @@ const About = () => {
         desc='At Unique Blossom'
         btn_1_txt='Enqiries'
         btn_2_txt='Admissions'
+        img='/about/about-hero.JPG'
       />
 
       <MainBody>

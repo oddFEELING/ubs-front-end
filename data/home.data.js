@@ -124,19 +124,19 @@ export const facilityData = [
 // ======= #Offer card data -->
 export const OfferCardData = [
   {
-    image: `/hero/creche-img.JPG`,
-    title: `Creche`,
+    image: `/home/creche-img.JPG`,
+    title: `Creche/Nursery`,
     clr: '#E7272780',
     content: `Basic and eciting knowledge for the kids`,
   },
   {
-    image: `/hero/nursery-img.JPG`,
-    title: `Nursery`,
+    image: `/home/nursery-img.JPG`,
+    title: `Primary`,
     clr: '#992DCC80',
     content: `Basic and eciting knowledge for the kids`,
   },
   {
-    image: `/hero/high-school-img.JPG`,
+    image: `/home/high-school-img.JPG`,
     title: `High School`,
     clr: '#27E74690',
     content: `Basic and eciting knowledge for the kids`,
