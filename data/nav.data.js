@@ -4,7 +4,7 @@ export const Nav_Links = [
   {
     text: `Home`,
     select: `home`,
-    link: ``,
+    link: `/`,
   },
   {
     text: `About Us`,
