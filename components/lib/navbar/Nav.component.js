@@ -22,7 +22,6 @@ export const Container = styled.div`
       padding: 0.5vh 8vw;
       height: max(8vh, 60px);
       backdrop-filter: blur(5px);
-      color: ${({ theme, slc }) => (slc ? `#4BC7E2 ` : theme.colors.dk_1)};
       background-color: ${({ theme }) => theme.alpha('lt_1', 0.8)};
     `}
 
@@ -30,8 +29,7 @@ export const Container = styled.div`
     font-weight: 500;
     padding-bottom: 8px;
     position: relative;
-    color: ${({ theme, slc }) =>
-      slc ? theme.colors.clr_2 : theme.colors.lt_1};
+    color: ${({ theme }) => theme.colors.lt_1};
     font-size: ${({ theme }) => theme.fonts.size.md};
 
     &::after {

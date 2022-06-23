@@ -2,13 +2,16 @@
 
 import Image from 'next/image';
 import styled from 'styled-components';
+import useMobile from '../../../hooks/useMobile';
 import { galleryStore } from '../../../context/gallery.context';
 import { ImageData } from '../../../data/gallery.data';
 import React, { useEffect, useState } from 'react';
 import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 
 //=============================================>  RENDER
-const BoothComponent = ({ mobile }) => {
+const BoothComponent = ({ images }) => {
+  console.log(images);
+  const mobile = useMobile();
   const { selected } = galleryStore();
   const [ListProps, setListProps] = useState({
     style: { width: '90%', overflow: 'hidden' },
@@ -17,15 +20,21 @@ const BoothComponent = ({ mobile }) => {
     rowHeight: 350,
   });
 
+  // ======= set image dimensions state -->
   useEffect(() => {
     setListProps({
-      style: { width: mobile ? '100%' : '90%', overflow: 'hidden' },
-      cols: mobile ? 2 : 4,
+      style: {
+        width: mobile && window.innerWidth <= 800 ? '100%' : '90%',
+        overflow: 'hidden',
+      },
+      cols: mobile && window.innerWidth <= 800 ? 2 : 4,
       gap: 8,
-      rowHeight: mobile ? 200 : 350,
+      rowHeight: mobile && window.innerWidth <= 800 ? 200 : 350,
     });
   }, [mobile]);
 
+  // ======= check the images passed through -->
+  images && console.log(images);
   return (
     <ImageList
       sx={{ ...ListProps.style }}

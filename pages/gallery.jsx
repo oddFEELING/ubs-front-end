@@ -17,26 +17,16 @@ import {
 } from '../styles/Gallery.component';
 import LoaderComponent from '../components/lib/loader/Loader.component';
 import ErrorComponent from '../components/lib/error/Error.Component';
+import useFetch from '../hooks/useFetch';
 
 const Gallery = () => {
   const { selected } = galleryStore();
   const mobile = useMobile();
 
   // ======= get category data -->
-  const { data: Categories } = useQuery(
-    'gallery-key',
-    () => {
-      return axios.get(
-        'https://ubs-cms-strapi.herokuapp.com/api/photo-categories',
-        {
-          headers: {
-            authorization: `BEARER ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
-          },
-        }
-      );
-    },
-    3000
-  );
+  const { data: Categories } = useFetch('photo-categories');
+  // ======= get gallery data -->
+  const { data: Images } = useFetch('images');
 
   useEffect(() => {
     AOS.init({
@@ -66,7 +56,7 @@ const Gallery = () => {
             })}
         </TagWrapper>
 
-        <BoothComponent mobile={mobile} />
+        <BoothComponent images={Images} />
       </GalleryWrapper>
     </Contaoiner>
   );

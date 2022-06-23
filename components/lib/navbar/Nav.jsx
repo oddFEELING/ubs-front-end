@@ -56,11 +56,9 @@ const Nav = () => {
             return (
               <Link href={data.link} key={index} passHref>
                 <a
-                  slc={true}
                   className={scrolled ? `scrolled link` : `link`}
                   onClick={() => {
                     setCurrent_route(data.select);
-                    console.log(current_route);
                   }}
                 >
                   {data.text}
@@ -93,7 +91,7 @@ const Nav = () => {
           {Nav_Links.map((data, index) => {
             return (
               <Link href={data.link} key={index} passHref>
-                <a className='link' onClick={() => setIsOpen(false)}>
+                <a className='link' onClick={MenuHandler}>
                   {data.text}
                 </a>
               </Link>
