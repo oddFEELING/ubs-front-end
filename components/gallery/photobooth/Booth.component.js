@@ -24,8 +24,6 @@ const BoothComponent = ({ mobile }) => {
       gap: 8,
       rowHeight: mobile ? 200 : 350,
     });
-
-    console.log(mobile);
   }, [mobile]);
 
   return (

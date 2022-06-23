@@ -98,18 +98,3 @@ export const ImageData = [
     category: 'people',
   },
 ];
-
-export const TagData = [
-  {
-    text: `all`,
-  },
-  {
-    text: `school building`,
-  },
-  {
-    text: `events`,
-  },
-  {
-    text: `people`,
-  },
-];

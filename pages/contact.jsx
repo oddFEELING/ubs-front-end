@@ -1,8 +1,8 @@
 /** 🌹oddFEELING */
 
-import React, { useEffect } from 'react';
-import Head from 'next/head';
 import AOS from 'aos';
+import Head from 'next/head';
+import React, { useEffect } from 'react';
 import * as S from '../styles/Contact.component';
 import Hero from '../components/lib/hero/Hero.component';
 import ContactCardComponent from '../components/contact/ContactCard.component';
@@ -15,6 +15,7 @@ const Contact = () => {
       disable: 'mobile',
     });
   });
+
   return (
     <S.Container>
       <Head>
