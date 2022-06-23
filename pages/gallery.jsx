@@ -16,7 +16,7 @@ import {
   TagWrapper,
 } from '../styles/Gallery.component';
 import LoaderComponent from '../components/lib/loader/Loader.component';
-import ErrorComponent from '../components/lib/error/Error.Component';
+import ErrorComponent from '../components/lib/error/Error.component';
 import useFetch from '../hooks/useFetch';
 
 const Gallery = () => {
