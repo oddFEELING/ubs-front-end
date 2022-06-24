@@ -5,7 +5,7 @@ export const SlideData = [
   {
     title: `Unique Blossom Schools`,
     desc: `Leadership and Knowledge`,
-    img: '/hero/hero-img-1.jpg',
+    img: '/hero/hero-img-1.webp',
     buttons: [
       {
         text: `Enquiries`,
@@ -26,7 +26,7 @@ export const SlideData = [
   {
     title: `Lucrative Hands-on Skills`,
     desc: `Discover your childs Talent and build on it!`,
-    img: '/hero/hero-img-2.JPG',
+    img: '/hero/hero-img-2.webp',
     buttons: [
       {
         text: `enquiries`,
@@ -47,7 +47,7 @@ export const SlideData = [
   {
     title: `Educative Trips and Events`,
     desc: `Cultural days, exclusive excursions, sports events and many more `,
-    img: '/hero/hero-img-3.JPG',
+    img: '/hero/hero-img-3.webp',
     buttons: [
       {
         text: `enquiries`,
