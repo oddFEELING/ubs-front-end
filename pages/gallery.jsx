@@ -3,9 +3,7 @@
 import AOS from 'aos';
 import axios from 'axios';
 import Script from 'next/script';
-import { useQuery } from 'react-query';
 import React, { useEffect } from 'react';
-import useMobile from '../hooks/useMobile';
 import Hero from '../components/lib/hero/Hero.component';
 import { galleryStore } from '../context/gallery.context';
 import TagComponent from '../components/lib/tag/Tag.component';
@@ -21,12 +19,11 @@ import useFetch from '../hooks/useFetch';
 
 const Gallery = () => {
   const { selected } = galleryStore();
-  const mobile = useMobile();
 
   // ======= get category data -->
   const { data: Categories } = useFetch('photo-categories');
   // ======= get gallery data -->
-  const { data: Images } = useFetch('images');
+  const { data: Images, isLoading, isError, isSuccess } = useFetch('images');
 
   useEffect(() => {
     AOS.init({
@@ -56,7 +53,9 @@ const Gallery = () => {
             })}
         </TagWrapper>
 
-        <BoothComponent images={Images} />
+        {isSuccess && <BoothComponent images={Images} />}
+        {isLoading && <LoaderComponent />}
+        {isError && <ErrorComponent />}
       </GalleryWrapper>
     </Contaoiner>
   );

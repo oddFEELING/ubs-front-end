@@ -10,7 +10,6 @@ import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 
 //=============================================>  RENDER
 const BoothComponent = ({ images }) => {
-  console.log(images);
   const mobile = useMobile();
   const { selected } = galleryStore();
   const [ListProps, setListProps] = useState({
@@ -34,7 +33,8 @@ const BoothComponent = ({ images }) => {
   }, [mobile]);
 
   // ======= check the images passed through -->
-  images && console.log(images);
+  let newImages = images && images.data.data;
+  console.log(newImages[0]);
   return (
     <ImageList
       sx={{ ...ListProps.style }}
@@ -42,22 +42,24 @@ const BoothComponent = ({ images }) => {
       gap={8}
       rowHeight={ListProps.rowHeight}
     >
-      {ImageData &&
-        ImageData.map((image, index) => {
+      {images &&
+        newImages.map((image, index) => {
           return (
             <React.Fragment key={index}>
-              {(image.category === selected || selected === 'all') && (
+              {(image.attributes.photo_category.data.attributes.Title ===
+                selected ||
+                selected === 'all') && (
                 <ImageListItem
                   key={index}
-                  rows={image.rows}
-                  cols={image.columns}
+                  rows={image.attributes.Rows}
+                  cols={image.attributes.Columns}
                   data-aos='fade-up'
                 >
                   <Image
                     alt={image.img}
                     layout='fill'
                     loading='lazy'
-                    src={image.img}
+                    src={image.attributes.Photo.data.attributes.url}
                     objectFit='cover'
                     placeholder={image.img}
                   />
@@ -68,7 +70,7 @@ const BoothComponent = ({ images }) => {
                         'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
                         'rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
                     }}
-                    title={`${image.title} by ${image.author}`}
+                    title={`${image.attributes.Title} by @${image.attributes.Author.data.attributes.username}`}
                     position='top'
                   />
                 </ImageListItem>

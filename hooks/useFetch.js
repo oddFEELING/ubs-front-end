@@ -21,11 +21,14 @@ const useFetch = (target) => {
     // ======= photos -->
     case 'images':
       return (Query = useQuery('images', () =>
-        axios.get('https://ubs-cms-strapi.herokuapp.com/api/photos', {
-          headers: {
-            authorization: `BEARER ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
-          },
-        })
+        axios.get(
+          'https://ubs-cms-strapi.herokuapp.com/api/photos?populate=*',
+          {
+            headers: {
+              authorization: `BEARER ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
+            },
+          }
+        )
       ));
 
     default:
