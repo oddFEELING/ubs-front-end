@@ -1,7 +1,7 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
-import EquipImg from '../../../assets/images/hero/equip-img.JPG';
+import EquipImg from '../../../assets/images/hero/equip-img.webp';
 import Shape_1 from '../../../assets/images/common/shape-1.svg';
 import Shape_2 from '../../../assets/images/common/shape-2.svg';
 import { useTheme } from 'styled-components';
