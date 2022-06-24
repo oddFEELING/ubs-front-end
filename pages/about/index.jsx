@@ -19,6 +19,7 @@ const About = () => {
       disable: 'phone',
     });
   });
+
   return (
     <div>
       <Head>
@@ -32,7 +33,7 @@ const About = () => {
         desc='At Unique Blossom'
         btn_1_txt='Enqiries'
         btn_2_txt='Admissions'
-        img='/about/about-hero.JPG'
+        img='/about/about-hero.webp'
       />
 
       <MainBody>

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { AboutCopy } from '../../../data/about.data';
 import Separator from '../../lib/separator/Separator.component';
-import CopyImg from '../../../assets/images/about/about-copy-img.JPG';
+import CopyImg from '../../../assets/images/about/about-copy-img.webp';
 
 //=============================================>  # RENDER
 const Main = () => {

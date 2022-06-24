@@ -48,7 +48,7 @@ const Container = styled.section`
     `linear-gradient(to bottom, ${theme.alpha('clr_4', 0.9)}, ${theme.alpha(
       'clr_4',
       0.9
-    )}), url('/about/about-value.jpg')`};
+    )}), url('/about/about-value.webp')`};
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
