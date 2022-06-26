@@ -85,8 +85,8 @@ const ExecWrapper = styled.section`
 
 //  component card
 const ExecCard = styled.div`
-  width: 400px;
-  height: 550px;
+  width: 300px;
+  height: 450px;
   display: flex;
   position: relative;
   align-items: center;

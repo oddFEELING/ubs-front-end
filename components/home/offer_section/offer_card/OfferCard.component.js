@@ -32,9 +32,9 @@ export default OfferCard;
 
 //=============================================>  STYLE
 const Container = styled.div`
-  gap: 8%;
+  gap: 4%;
   display: flex;
-  padding: 10% 8%;
+  padding: 5% 8%;
   flex-direction: column;
   width: max(300px, 20vw);
   height: max(500px, 35vh);
@@ -64,14 +64,14 @@ const Container = styled.div`
 `;
 
 const Title = styled.h3`
-  font-weight: 600;
+  font-weight: 700;
   color: ${({ theme }) => theme.colors.lt_1};
-  font-size: ${({ theme }) => theme.fonts.size.xl};
+  font-size: ${({ theme }) => theme.fonts.size.lg};
 `;
 
 const Content = styled.p`
   font-weight: 400;
-  margin-top: -3vh;
+  margin-top: -1vh;
   font-family: ${({ theme }) => theme.fonts.sec};
   font-size: ${({ theme }) => theme.fonts.size.md};
   color: ${({ theme }) => theme.alpha('lt_1', 0.7)};

@@ -41,7 +41,7 @@ const Gallery = () => {
         desc='Capturing events in the moment'
         btn_1_txt='enquiries'
         btn_2_txt='Admission'
-        img='/gallery/gallery-hero.jpg'
+        img='/gallery/gallery-hero.webp'
       />
       <GalleryWrapper>
         <h1>Image categories</h1>
