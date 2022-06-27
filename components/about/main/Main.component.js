@@ -12,7 +12,7 @@ const Main = () => {
   return (
     <Container>
       <Title>The History behind our great School</Title>
-      <Separator width='150px' height='8px' top='-70px' />
+      <Separator width='150px' height='8px' top='-50px' />
       <Content>
         <Txt data-aos='fade-right'>{AboutCopy}</Txt>
         <ImgDiv data-aos='zoom-in'>
@@ -37,7 +37,7 @@ export default Main;
 //=============================================>   # COMPONENT
 
 const Container = styled.main`
-  gap: 80px;
+  gap: 60px;
   width: 100%;
   display: flex;
   padding: 80px 5vw;
@@ -49,7 +49,13 @@ const Container = styled.main`
 
 const Title = styled.h3`
   font-weight: 700;
+  text-align: center;
   font-size: ${({ theme }) => theme.fonts.size.xl};
+
+  @media screen and (max-width: 1024px) {
+    font-weight: 500;
+    font-size: ${({ theme }) => theme.fonts.size.lg};
+  }
 `;
 
 const Content = styled.div`
@@ -76,6 +82,7 @@ const Txt = styled.p`
   @media (max-width: 1024px) {
     width: 100%;
     padding: 20px;
+    font-size: ${({ theme }) => theme.fonts.size.sm};
   }
 `;
 
@@ -89,5 +96,6 @@ const ImgDiv = styled.div`
 
   @media (max-width: 1024px) {
     width: 90%;
+    height: 250px;
   }
 `;
