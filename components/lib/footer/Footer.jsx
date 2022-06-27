@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import { useTheme } from 'styled-components';
 import { AddressData, SocialData } from '../../../data/footer.data';
+import MailchimpComponent from '../mailchimp/Mailchimp.component';
 import LogoImg from '../../../assets/images/logo/logo.jpg';
 import {
   ContactCard,
@@ -63,7 +64,8 @@ const Footer = () => {
         </ContactDiv>
 
         <SubscribeDiv>
-          <h1>Newsletter Coming soon!</h1>
+          <h1>Join the NewsLetter!</h1>
+          <MailchimpComponent />
         </SubscribeDiv>
 
         <SocialDiv>
