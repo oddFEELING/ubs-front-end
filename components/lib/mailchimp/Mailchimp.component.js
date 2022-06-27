@@ -1,29 +1,37 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
+import styled from 'styled-components';
 import CustomFormComponent from './CustomForm.component';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 const MailchimpComponent = () => {
-  // ======= construct the url -->
-  const postUrl = `${process.env.NEEXT_PUBLIC_MAILCHIMP_URL}?u=${process.env.NEEXT_PUBLIC_MAILCHIMP_U}&id=${process.env.NEEXT_PUBLIC_MAILCHIMP_ID}`;
-
   // ======= render function for mail chimp -->
-  const renderFunction = (subscribe, status, message) => {
-    return (
-      <CustomFormComponent
-        status={status}
-        message={message}
-        onValidate={(formData) => subscribe(formData)}
-      />
-    );
-  };
+  const renderFunction = ({ subscribe, status, message }) => (
+    <CustomFormComponent
+      status={status}
+      message={message}
+      onValidated={(formData) => subscribe(formData)}
+    />
+  );
 
   return (
-    <div>
-      <MailchimpSubscribe url={postUrl} render={renderFunction} />
-    </div>
+    <Container>
+      <MailchimpSubscribe
+        url={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
+        render={renderFunction}
+      />
+    </Container>
   );
 };
 
 export default MailchimpComponent;
+
+const Container = styled.section`
+  width: 100%;
+  height: 80%;
+  display: flex;
+  padding-left: 50px;
+  align-items: flex-start;
+  border-left: thin solid ${({ theme }) => theme.colors.lt_1};
+`;

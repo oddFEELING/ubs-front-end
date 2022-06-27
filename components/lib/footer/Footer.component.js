@@ -110,19 +110,15 @@ export const ContactText = styled.span`
 `;
 // ======= subscribe section -->
 export const SubscribeDiv = styled.div`
+  gap: 20px;
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 50px;
+  padding: 10px;
+  flex-direction: column;
   align-items: center;
+  align-items: flex-start;
   color: ${({ theme }) => theme.colors.lt_1};
-
-  .news-letter-wrapper {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    border-left: thin solid ${({ theme }) => theme.colors.lt_1};
-  }
 
   @media (max-width: 1024px) {
     width: 100%;
