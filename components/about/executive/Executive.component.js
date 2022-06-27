@@ -106,6 +106,7 @@ const ExecCard = styled.div`
 
 const Title = styled.h2`
   font-weight: 800;
+  text-align: center;
   font-size: ${({ theme }) => theme.fonts.size.xl};
   color: ${({ theme }) => theme.colors.dk_1};
 `;
@@ -138,6 +139,7 @@ const TitleCard = styled.div`
   @media (max-width: 480px) {
     gap: 2px;
     height: 50px;
+
     h1 {
       font-weight: 500;
       font-size: ${({ theme }) => theme.fonts.size.md};

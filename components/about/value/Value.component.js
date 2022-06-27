@@ -58,6 +58,7 @@ const Container = styled.section`
 
 const Title = styled.h3`
   font-weight: 700;
+  text-align: center;
   color: ${({ theme }) => theme.colors.lt_2};
   font-size: ${({ theme }) => theme.fonts.size.xl};
 `;
