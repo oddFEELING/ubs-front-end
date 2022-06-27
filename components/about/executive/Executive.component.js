@@ -99,7 +99,8 @@ const ExecCard = styled.div`
     20px 20px 0 ${({ theme }) => theme.colors.clr_5};
 
   @media (max-width: 480px) {
-    width: 90%;
+    width: 200px;
+    height: 300px;
   }
 `;
 
@@ -132,5 +133,14 @@ const TitleCard = styled.div`
     font-weight: 500;
     font-family: ${({ theme }) => theme.fonts.sec};
     font-size: ${({ theme }) => theme.fonts.size.sm};
+  }
+
+  @media (max-width: 480px) {
+    gap: 2px;
+    height: 50px;
+    h1 {
+      font-weight: 500;
+      font-size: ${({ theme }) => theme.fonts.size.md};
+    }
   }
 `;
