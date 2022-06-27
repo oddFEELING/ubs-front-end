@@ -33,7 +33,14 @@ const Equip = () => {
 
       {/* ====== image  */}
       <ImgWrapper>
-        <Image src={EquipImg} alt='' layout='fill' className='img' />
+        <Image
+          src={EquipImg}
+          alt=''
+          quality='100'
+          layout='fill'
+          placeholder='blur'
+          className='img'
+        />
       </ImgWrapper>
 
       {/* ====== text  */}

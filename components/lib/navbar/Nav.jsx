@@ -37,7 +37,14 @@ const Nav = () => {
     <Container mobile={isMobile} scrolled={scrolled}>
       {/* ====== logo */}
       <LogoDiv>
-        <Image src={logoImg} alt='' layout='fill' />
+        <Image
+          src={logoImg}
+          alt=''
+          layout='fill'
+          priority
+          placeholder='blur'
+          quality={100}
+        />
       </LogoDiv>
 
       {/* ====== links */}

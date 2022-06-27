@@ -61,7 +61,12 @@ const BoothComponent = ({ images }) => {
                     loading='lazy'
                     src={image.attributes.Photo.data.attributes.url}
                     objectFit='cover'
-                    placeholder={image.img}
+                    quality='100'
+                    placeholder={
+                      image.attributes.Photo.data.attributes.formats.thumbnail
+                        .url
+                    }
+                    // placeholder = 'blur'
                   />
 
                   <ImageListItemBar

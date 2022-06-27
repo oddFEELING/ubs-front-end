@@ -19,6 +19,7 @@ const Blog = () => {
         desc='Stay up to date with NEWS and events'
         btn_1_txt='Enquiries'
         btn_2_txt='Admission'
+        img='/blog/blog-img.webp'
       />
 
       <h1>Blog Coming soon</h1>
