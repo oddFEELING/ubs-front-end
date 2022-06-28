@@ -3,9 +3,9 @@
 import AOS from 'aos';
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import useMobile from '../../hooks/useMobile';
+import Router from 'next/router';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useEffect, useState } from 'react';
 import { ExecutiveData } from '../../data/about.data';
 import logoImg from '../../assets/images/logo/logo.jpg';
 import Button from '../../components/lib/button/Button.component';
@@ -13,29 +13,22 @@ import { Container, LogoDiv } from '../../styles/about/execPage.component';
 import ExecCardComponent from '../../components/executive/ExecCard.component';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
 import Separator from '../../components/lib/separator/Separator.component';
+import useMobile from '../../hooks/useMobile';
 
 const Executives = () => {
   const mobile = useMobile();
-  const [swiperStyle, setSwiperStyle] = useState({
-    width: '60vw',
+  console.log(mobile);
+  const swiperStyle = {
+    width: mobile ? '100%' : '60vw',
     height: 'auto',
     display: 'flex',
     alignItems: 'center',
     borderRadius: '18px',
     justifyContent: 'center',
     boxShadow: '5px 12px 40px rgba(0,0,0,0.2)',
-  });
+  };
 
   useEffect(() => {
-    setSwiperStyle({
-      width: mobile || window.innerWidth < 1024 ? '100%' : '60vw',
-      height: 'auto',
-      display: 'flex',
-      alignItems: 'center',
-      borderRadius: '18px',
-      justifyContent: 'center',
-      boxShadow: '5px 12px 40px rgba(0,0,0,0.2)',
-    });
     AOS.init({
       delay: 0,
       once: true,
@@ -43,7 +36,7 @@ const Executives = () => {
       duration: 800,
       disable: 'phone',
     });
-  });
+  }, []);
 
   const slideStyle = {
     width: '100%',
@@ -112,7 +105,12 @@ const Executives = () => {
         </Swiper>
 
         {/* ====== back top site */}
-        <Button text='Back to site' bg='red' color='white' />
+        <Button
+          text='Back to site'
+          bg='red'
+          color='white'
+          onClick={() => Router.back()}
+        />
       </Container>
     </div>
   );
