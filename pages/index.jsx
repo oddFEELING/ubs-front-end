@@ -11,6 +11,7 @@ import Facility from '../components/home/facility_section/Facility';
 import Offer from '../components/home/offer_section/Offer';
 import Testimony from '../components/home/testimony_section/Testimony';
 import Register from '../components/home/register/Register';
+import AppLayout from '../layout/AppLayout';
 
 //=============================================>  COMPONENT
 export default function Home() {
@@ -28,7 +29,10 @@ export default function Home() {
     <S.Container>
       <Head>
         <title>UBS | Home</title>
-        <meta name='description' content='Unique Blossom official site' />
+        <meta
+          name='description'
+          content='Unique Blossom Schools official site'
+        />
         <link rel='icon' href='/logo.jpg' />
       </Head>
 
@@ -42,3 +46,7 @@ export default function Home() {
     </S.Container>
   );
 }
+
+Home.getLayout = (page) => {
+  return <AppLayout>{page}</AppLayout>;
+};

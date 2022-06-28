@@ -2,14 +2,40 @@
 
 import AOS from 'aos';
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import useMobile from '../../hooks/useMobile';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { ExecutiveData } from '../../data/about.data';
-import Hero from '../../components/lib/hero/Hero.component';
-import { Container } from '../../styles/about/execPage.component';
+import logoImg from '../../assets/images/logo/logo.jpg';
+import Button from '../../components/lib/button/Button.component';
+import { Container, LogoDiv } from '../../styles/about/execPage.component';
 import ExecCardComponent from '../../components/executive/ExecCard.component';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
+import Separator from '../../components/lib/separator/Separator.component';
 
 const Executives = () => {
+  const mobile = useMobile();
+  const [swiperStyle, setSwiperStyle] = useState({
+    width: '60vw',
+    height: 'auto',
+    display: 'flex',
+    alignItems: 'center',
+    borderRadius: '18px',
+    justifyContent: 'center',
+    boxShadow: '5px 12px 40px rgba(0,0,0,0.2)',
+  });
+
   useEffect(() => {
+    setSwiperStyle({
+      width: mobile || window.innerWidth < 1024 ? '100%' : '60vw',
+      height: 'auto',
+      display: 'flex',
+      alignItems: 'center',
+      borderRadius: '18px',
+      justifyContent: 'center',
+      boxShadow: '5px 12px 40px rgba(0,0,0,0.2)',
+    });
     AOS.init({
       delay: 0,
       once: true,
@@ -19,6 +45,14 @@ const Executives = () => {
     });
   });
 
+  const slideStyle = {
+    width: '100%',
+    height: 'auto',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
   return (
     <div>
       <Head>
@@ -27,26 +61,58 @@ const Executives = () => {
         <link rel='icon' href='/logo.jpg' />
       </Head>
 
-      <Hero
-        title='Meet the Executives'
-        desc='The right people in the right Job!'
-        btn_1_txt='Enquiries'
-        btn_2_txt='Admissions'
-      />
       <Container>
-        {ExecutiveData &&
-          ExecutiveData.map((executive, index) => {
-            return (
-              <ExecCardComponent
-                name={executive.name}
-                position={executive.title}
-                imageSrc={executive.image}
-                left={executive.left}
-                key={index}
-                firstItem={index === 0 ? true : false}
-              />
-            );
-          })}
+        {/* ====== logo */}
+        <LogoDiv>
+          <Image
+            src={logoImg}
+            alt=''
+            priority
+            objectFit='cover'
+            placeholder='blur'
+            layout='fill'
+          />
+        </LogoDiv>
+
+        {/* ====== title */}
+        <h1>
+          The Right <b>PEOPLE</b> In The Right <b>JOBS!</b>
+        </h1>
+        <Separator
+          width='120px'
+          height='8px'
+          top='-2.5vh'
+          sx={{ backgroundColor: '#992DCC' }}
+        />
+
+        {/* ====== main */}
+        <Swiper
+          slidesPerView={1}
+          modules={[Pagination, Navigation, Autoplay, EffectFade]}
+          // effect='fade'
+          navigation
+          loop
+          speed={2000}
+          autoplay
+          pagination
+          style={swiperStyle}
+        >
+          {ExecutiveData &&
+            ExecutiveData.map((data, index) => {
+              return (
+                <SwiperSlide style={slideStyle} key={index}>
+                  <ExecCardComponent
+                    image={data.image}
+                    left={data.left}
+                    color={data.color}
+                  />
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
+
+        {/* ====== back top site */}
+        <Button text='Back to site' bg='red' color='white' />
       </Container>
     </div>
   );

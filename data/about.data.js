@@ -30,11 +30,12 @@ export const valueData = [
 export const ExecutiveData = [
   {
     image:
-      'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
+      'https://images.unsplash.com/photo-1565884280295-98eb83e41c65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsYWNrJTIwcGVyc29ufGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
     name: 'Dr. Aimasiko',
     title: 'Principal',
     delay: 0,
     left: true,
+    color: '#27E746',
   },
   {
     image:
@@ -42,13 +43,34 @@ export const ExecutiveData = [
     name: 'Chief Balogun',
     title: 'Founder',
     delay: 300,
+    color: '#992DCC',
   },
   {
     image:
-      'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+      'https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZXJzb258ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     name: 'Mrs Deborah',
     title: 'Head of School',
     delay: 600,
     left: true,
+    color: '#E72727',
+  },
+
+  {
+    image:
+      'https://images.unsplash.com/photo-1621905252472-943afaa20e20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJsYWNrJTIwcGVyc29ufGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    name: 'Daniel marker',
+    title: 'HOS',
+    delay: 700,
+    color: '#29176B',
+  },
+
+  {
+    image:
+      'https://images.unsplash.com/photo-1621905252472-943afaa20e20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJsYWNrJTIwcGVyc29ufGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    name: 'Daniel marker',
+    title: 'HOS',
+    delay: 700,
+    left: true,
+    color: '#393939',
   },
 ];

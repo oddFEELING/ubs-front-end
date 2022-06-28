@@ -3,6 +3,7 @@
 import AOS from 'aos';
 import Head from 'next/head';
 import React, { useEffect } from 'react';
+import AppLayout from '../../layout/AppLayout';
 import { MainBody } from '../../styles/about/about.component';
 import Hero from '../../components/lib/hero/Hero.component';
 import Main from '../../components/about/main/Main.component';
@@ -46,3 +47,7 @@ const About = () => {
 };
 
 export default About;
+
+About.getLayout = (page) => {
+  return <AppLayout>{page}</AppLayout>;
+};

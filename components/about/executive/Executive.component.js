@@ -24,18 +24,27 @@ const ExecutiveComponent = () => {
           ExecutiveData.map((data, index) => {
             const area = `card_${index + 1}`;
             return (
-              <ExecCard
-                key={index}
-                style={{ area }}
-                data-aos='fade-up'
-                data-aos-delay={data.delay}
-              >
-                <Image src={data.image} alt='' layout='fill' />
-                <TitleCard>
-                  <h1>{data.name}</h1>
-                  <p>{data.title}</p>
-                </TitleCard>
-              </ExecCard>
+              <React.Fragment key={index}>
+                {index <= 2 && (
+                  <ExecCard
+                    style={{ area }}
+                    data-aos='fade-up'
+                    data-aos-delay={data.delay}
+                  >
+                    <Image
+                      src={data.image}
+                      alt=''
+                      layout='fill'
+                      objectFit='cover'
+                      quality={100}
+                    />
+                    <TitleCard>
+                      <h1>{data.name}</h1>
+                      <p>{data.title}</p>
+                    </TitleCard>
+                  </ExecCard>
+                )}
+              </React.Fragment>
             );
           })}
       </ExecWrapper>
@@ -91,7 +100,6 @@ const ExecCard = styled.div`
   position: relative;
   align-items: center;
   border-radius: 10px;
-  background-color: red;
   justify-content: center;
   box-shadow: 5px 5px 0 ${({ theme }) => theme.colors.lt_2},
     10px 10px 0 ${({ theme }) => theme.colors.clr_2},
