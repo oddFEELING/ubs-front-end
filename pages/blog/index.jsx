@@ -1,9 +1,18 @@
 /** 🌹oddFEELING */
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
 import Hero from '../../components/lib/hero/Hero.component';
+import AppLayout from '../../layout/AppLayout';
 
 const Blog = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      offset: 0,
+      disable: 'mobile',
+    });
+  });
   return (
     <div
       style={{
@@ -28,3 +37,7 @@ const Blog = () => {
 };
 
 export default Blog;
+
+Blog.getLayout = (page) => {
+  return <AppLayout>{page}</AppLayout>;
+};

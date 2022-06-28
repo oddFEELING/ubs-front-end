@@ -16,6 +16,7 @@ import {
 import LoaderComponent from '../components/lib/loader/Loader.component';
 import ErrorComponent from '../components/lib/error/Error.component';
 import useFetch from '../hooks/useFetch';
+import AppLayout from '../layout/AppLayout';
 
 const Gallery = () => {
   const { selected } = galleryStore();
@@ -62,3 +63,7 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
+Gallery.getLayout = (page) => {
+  return <AppLayout> {page}</AppLayout>;
+};

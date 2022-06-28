@@ -2,6 +2,7 @@
 
 import AOS from 'aos';
 import Head from 'next/head';
+import AppLayout from '../layout/AppLayout';
 import React, { useEffect } from 'react';
 import * as S from '../styles/Contact.component';
 import Hero from '../components/lib/hero/Hero.component';
@@ -37,3 +38,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
+Contact.getLayout = (page) => {
+  return <AppLayout>{page}</AppLayout>;
+};

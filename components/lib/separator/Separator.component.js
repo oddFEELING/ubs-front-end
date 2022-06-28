@@ -6,7 +6,7 @@ import { css } from 'styled-components';
 
 //=============================================>  COMPONENT
 const Separator = ({ ...props }) => {
-  const { right, left, top, bottom, width, height, delay, red } = props;
+  const { right, left, top, bottom, width, height, delay, red, sx } = props;
 
   return (
     <Container
@@ -19,6 +19,7 @@ const Separator = ({ ...props }) => {
       data-aos='zoom-out-right'
       data-aos-delay={delay}
       red={red}
+      style={{ ...sx }}
     />
   );
 };

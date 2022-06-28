@@ -11,14 +11,12 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
 function MyApp({ Component, pageProps }) {
   const client = new QueryClient();
-  // useQuery(['gallery-photos', 'gallery-categories', 'blog-posts']);
+  const getLayout = Component.getLayout || ((page) => page);
 
   return (
     <QueryClientProvider client={client}>
       <ThemeProvider theme={ThemeObj}>
-        <AppLayout>
-          <Component {...pageProps} />
-        </AppLayout>
+        {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
