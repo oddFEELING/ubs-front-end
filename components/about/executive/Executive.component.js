@@ -24,6 +24,7 @@ const ExecutiveComponent = () => {
             const area = `card_${index + 1}`;
             return (
               <ExecCard
+                key={index}
                 style={{ area }}
                 data-aos='fade-up'
                 data-aos-delay={data.delay}
