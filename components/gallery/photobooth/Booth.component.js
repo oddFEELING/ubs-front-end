@@ -46,7 +46,7 @@ const BoothComponent = ({ images }) => {
         newImages.map((image, index) => {
           return (
             <React.Fragment key={index}>
-              {(image.attributes.photo_category.data.attributes.Title ===
+              {(image.attributes.photo_category?.data.attributes.Title ===
                 selected ||
                 selected === 'all') && (
                 <ImageListItem
@@ -75,7 +75,7 @@ const BoothComponent = ({ images }) => {
                         'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
                         'rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%)',
                     }}
-                    title={`${image.attributes.Title} by @${image.attributes.Author.data.attributes.username}`}
+                    title={`${image.attributes.Title} by @${image.attributes.Author?.data.attributes.username}`}
                     position='top'
                   />
                 </ImageListItem>
