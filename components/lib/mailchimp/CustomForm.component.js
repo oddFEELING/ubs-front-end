@@ -21,7 +21,7 @@ const CustomFormComponent = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (phone.length < 11) return alert('Phone number should be 11 digits');
     if (!email || !name || !lastname || phone) setText('Missing fields');
     email &&
       name &&

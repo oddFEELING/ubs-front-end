@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 import { useTheme } from 'styled-components';
 import { ExecutiveData } from '../../../data/about.data';
 import Separator from '../../lib/separator/Separator.component';
-import ButtonComponent from '../../lib/button/Button.component';
 
 //=============================================>  RENDER
 const ExecutiveComponent = () => {
@@ -24,38 +23,26 @@ const ExecutiveComponent = () => {
           ExecutiveData.map((data, index) => {
             const area = `card_${index + 1}`;
             return (
-              <React.Fragment key={index}>
-                {index <= 2 && (
-                  <ExecCard
-                    style={{ area }}
-                    data-aos='fade-up'
-                    data-aos-delay={data.delay}
-                  >
-                    <Image
-                      src={data.image}
-                      alt=''
-                      layout='fill'
-                      objectFit='cover'
-                      quality={100}
-                    />
-                    <TitleCard>
-                      <h1>{data.name}</h1>
-                      <p>{data.title}</p>
-                    </TitleCard>
-                  </ExecCard>
-                )}
-              </React.Fragment>
+              <ExecCard
+                style={{ area }}
+                data-aos='fade-up'
+                data-aos-delay={data.delay}
+              >
+                <Image
+                  src={data.image}
+                  alt=''
+                  layout='fill'
+                  objectFit='cover'
+                  quality={100}
+                />
+                <TitleCard>
+                  <h1>{data.name}</h1>
+                  <p>{data.title}</p>
+                </TitleCard>
+              </ExecCard>
             );
           })}
       </ExecWrapper>
-
-      <ButtonComponent
-        bg={theme.colors.clr_4}
-        hv_bg={theme.colors.clr_2}
-        color={theme.colors.lt_2}
-        text='view all'
-        onClick={() => router.push('about/executives')}
-      />
     </Container>
   );
 };
@@ -81,14 +68,18 @@ const ExecWrapper = styled.section`
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-areas: ' card_1 card_2 card_3';
+  grid-template-areas:
+    ' card_1 card_2 card_3'
+    'card_4 . card_5';
 
   @media (max-width: 1024px) {
     gap: 70px;
     grid-template-areas:
       'card_1'
       'card_2'
-      'card_3';
+      'card_3'
+      'card_4'
+      'card_5';
   }
 `;
 
