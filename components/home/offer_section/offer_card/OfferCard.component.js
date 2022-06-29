@@ -23,6 +23,7 @@ const OfferCard = ({ ...props }) => {
           backgroundColor: clr,
           color: '#f3f4ff',
         }}
+        onClick={() => alert('Info coming soon...')}
       />
     </Container>
   );
