@@ -34,8 +34,6 @@ export const ExecutiveData = [
     name: 'Dr. Aimasiko',
     title: 'Principal',
     delay: 0,
-    left: true,
-    color: '#27E746',
   },
   {
     image:
@@ -43,7 +41,6 @@ export const ExecutiveData = [
     name: 'Chief Balogun',
     title: 'Founder',
     delay: 300,
-    color: '#992DCC',
   },
   {
     image:
@@ -51,8 +48,6 @@ export const ExecutiveData = [
     name: 'Mrs Deborah',
     title: 'Head of School',
     delay: 600,
-    left: true,
-    color: '#E72727',
   },
 
   {
@@ -61,16 +56,13 @@ export const ExecutiveData = [
     name: 'Daniel marker',
     title: 'HOS',
     delay: 700,
-    color: '#29176B',
   },
 
   {
     image:
-      'https://images.unsplash.com/photo-1621905252472-943afaa20e20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJsYWNrJTIwcGVyc29ufGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+      'https://images.unsplash.com/photo-1610652492500-ded49ceeb378?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGJsYWNrJTIwcGVyc29ufGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
     name: 'Daniel marker',
     title: 'HOS',
     delay: 700,
-    left: true,
-    color: '#393939',
   },
 ];

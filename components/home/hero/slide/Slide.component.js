@@ -2,11 +2,15 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
+import { elementsStore } from '../../../../context/element.context';
 import Button from '../../../lib/button/Button.component';
 
 //=============================================>  COMPONENT
 const Slide = ({ ...props }) => {
+  const router = useRouter();
   const { title, desc, img, buttons } = props;
+  const { footerId } = elementsStore();
 
   return (
     <Container img={img}>
@@ -26,6 +30,7 @@ const Slide = ({ ...props }) => {
                 hv_color={data.hv_color}
                 bg={data.bg}
                 hv_bg={data.hv_bg}
+                onClick={() => data.onclick(footerId, router)}
               />
             );
           })}

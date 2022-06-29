@@ -13,6 +13,7 @@ export const SlideData = [
         hv_color: ``,
         bg: `#E72727`,
         hv_bg: ``,
+        onclick: (element) => element.scrollIntoView({ behavior: 'smooth' }),
       },
       {
         text: `Admissions`,
@@ -20,6 +21,7 @@ export const SlideData = [
         hv_color: ``,
         bg: `#f3f4ff`,
         hv_bg: ``,
+        onclick: () => {},
       },
     ],
   },
@@ -34,6 +36,7 @@ export const SlideData = [
         hv_color: ``,
         bg: `#E72727`,
         hv_bg: ``,
+        onclick: (element) => element.scrollIntoView({ behavior: 'smooth' }),
       },
       {
         text: `Gallery`,
@@ -41,6 +44,9 @@ export const SlideData = [
         hv_color: ``,
         bg: `#f3f4ff`,
         hv_bg: ``,
+        onclick: (element, router) => {
+          router.push('/gallery');
+        },
       },
     ],
   },
@@ -55,6 +61,7 @@ export const SlideData = [
         hv_color: ``,
         bg: `#E72727`,
         hv_bg: ``,
+        onclick: (element) => element.scrollIntoView({ behavior: 'smooth' }),
       },
       {
         text: `view more`,
@@ -62,6 +69,7 @@ export const SlideData = [
         hv_color: ``,
         bg: `#f3f4ff`,
         hv_bg: ``,
+        onclick: () => {},
       },
     ],
   },
