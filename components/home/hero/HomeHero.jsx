@@ -13,7 +13,6 @@ const HomeHero = () => {
   const SwiperStyle = {
     width: '100%',
     height: '100%',
-    backgroundColor: 'rgba(130,20,20,1)',
   };
 
   // ======= Swiper options-->

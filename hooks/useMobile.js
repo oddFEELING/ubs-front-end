@@ -34,6 +34,7 @@ const useMobile = () => {
     window.addEventListener('load', watcher);
     window.addEventListener('focus', watcher);
     window.addEventListener('resize', watcher);
+    window.addEventListener('scroll', watcher);
     window.addEventListener('hashchange', watcher);
 
     // ======= cleanup -->
@@ -41,6 +42,7 @@ const useMobile = () => {
       window.removeEventListener('load', watcher);
       window.removeEventListener('focus', watcher);
       window.removeEventListener('resize', watcher);
+      window.removeEventListener('scroll', watcher);
       window.removeEventListener('hashchange', watcher);
     };
   });

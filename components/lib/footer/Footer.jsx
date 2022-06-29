@@ -1,9 +1,10 @@
 /** 🌹oddFEELING */
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import { useTheme } from 'styled-components';
+import { elementsStore } from '../../../context/element.context';
 import { AddressData, SocialData } from '../../../data/footer.data';
 import MailchimpComponent from '../mailchimp/Mailchimp.component';
 import LogoImg from '../../../assets/images/logo/logo.jpg';
@@ -23,6 +24,13 @@ import {
 
 const Footer = () => {
   const theme = useTheme();
+  const footId = useRef();
+  const { setFooterId } = elementsStore();
+
+  useEffect(() => {
+    setFooterId(footId.current);
+    console.log(footId.current);
+  }, [footId]);
 
   return (
     <Container>
@@ -87,7 +95,7 @@ const Footer = () => {
           </SocialWrapper>
         </SocialDiv>
       </MiddleSection>
-      <DarkSection />
+      <DarkSection ref={footId} />
     </Container>
   );
 };
