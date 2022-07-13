@@ -1,11 +1,12 @@
 /** 🌹oddFEELING */
 
 import styled from 'styled-components';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Button from '../button/Button.component';
 
 //=============================================>  # RENDER
 const CustomFormComponent = (props) => {
+  const mailform = useRef();
   const { status, message, onValidated } = props;
   const [text, setText] = useState('subscribe');
   const [email, setEmail] = useState('');
@@ -17,6 +18,12 @@ const CustomFormComponent = (props) => {
     status === 'sending' && setText('loading...');
     status === 'error' && setText('error');
     status === 'success' && setText('success');
+    if (status === 'success') {
+      setEmail('');
+      setName('');
+      setLastname('');
+      setPhone('');
+    }
   }, [status]);
 
   const handleSubmit = (e) => {
@@ -34,22 +41,16 @@ const CustomFormComponent = (props) => {
         MERGE1: name,
         MERGE2: phone,
       });
-
-    console.log(email);
-    console.log(lastname);
-    console.log(name);
-    console.log(phone);
-    console.log(message);
   };
   return (
-    <Form onSubmit={(e) => handleSubmit(e)} method='POST'>
+    <Form onSubmit={(e) => handleSubmit(e)} method='POST' ref={mailform}>
       <Section>
         {/* ====== email */}
         <Input
           required
           type='email'
           value={email}
-          placeholder='enter your email'
+          placeholder='email'
           onChange={(e) => setEmail(e.target.value)}
         />
         {/* ====== title field */}
@@ -57,7 +58,7 @@ const CustomFormComponent = (props) => {
           required
           type='text'
           value={lastname}
-          placeholder='enter your last name'
+          placeholder='last name'
           onChange={(e) => setLastname(e.target.value)}
         />
       </Section>
@@ -67,7 +68,7 @@ const CustomFormComponent = (props) => {
           required
           type='text'
           value={name}
-          placeholder='enter your name'
+          placeholder='first name'
           onChange={(e) => setName(e.target.value)}
         />
         {/* ====== phone */}
@@ -76,7 +77,7 @@ const CustomFormComponent = (props) => {
           type='tel'
           value={phone}
           minLength={10}
-          placeholder='enter your phone number'
+          placeholder='phone number'
           onChange={(e) => setPhone(e.target.value)}
         />
       </Section>

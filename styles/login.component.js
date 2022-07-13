@@ -12,8 +12,11 @@ export const Container = styled.main`
   position: relative;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('/about/about-hero.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
 
   h1 {
+    text-align: center;
     color: ${({ theme }) => theme.colors.lt_2};
   }
 `;
