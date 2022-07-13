@@ -24,13 +24,13 @@ import {
 
 const Footer = () => {
   const theme = useTheme();
-  const footId = useRef();
-  const { setFooterId } = elementsStore();
+  const footRef = useRef();
+  const { setfooterElement } = elementsStore();
 
   useEffect(() => {
-    setFooterId(footId.current);
-    console.log(footId.current);
-  }, [footId]);
+    setfooterElement(footRef.current);
+    console.log(footRef.current);
+  }, [footRef]);
 
   return (
     <Container>
@@ -95,7 +95,7 @@ const Footer = () => {
           </SocialWrapper>
         </SocialDiv>
       </MiddleSection>
-      <DarkSection ref={footId} />
+      <DarkSection ref={footRef} />
     </Container>
   );
 };

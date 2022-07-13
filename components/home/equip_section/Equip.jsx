@@ -5,6 +5,7 @@ import EquipImg from '../../../assets/images/hero/equip-img.webp';
 import Shape_1 from '../../../assets/images/common/shape-1.svg';
 import Shape_2 from '../../../assets/images/common/shape-2.svg';
 import { useTheme } from 'styled-components';
+import { elementsStore } from '../../../context/element.context';
 import Image from 'next/image';
 import {
   Container,
@@ -19,6 +20,7 @@ import Separator from '../../lib/separator/Separator.component';
 import Button from '../../lib/button/Button.component';
 
 const Equip = () => {
+  const { footerElement } = elementsStore();
   const theme = useTheme();
   return (
     <Container>
@@ -74,6 +76,7 @@ const Equip = () => {
           color={theme.colors.lt_1}
           bg={theme.colors.clr_4}
           hv_bg={theme.alpha('clr_1', 0.9)}
+          onClick={() => footerElement.scrollIntoView({ behavior: 'smooth' })}
         />
       </TextWrapper>
     </Container>

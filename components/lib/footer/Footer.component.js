@@ -38,7 +38,7 @@ export const MiddleSection = styled.div`
   gap: 40px;
   width: 100%;
   display: grid;
-  padding: 0 150px;
+  padding: 0 8vw;
   align-items: center;
   grid-template-areas:
     'card_1 card_2'
@@ -59,7 +59,7 @@ export const MiddleSection = styled.div`
 // ======= Contact section -->
 export const ContactDiv = styled.div`
   gap: 5px;
-  width: 600px;
+  min-width: 300px;
   height: 100%;
   display: flex;
   grid-area: card_1;
@@ -111,13 +111,13 @@ export const ContactText = styled.span`
 // ======= subscribe section -->
 export const SubscribeDiv = styled.div`
   gap: 20px;
-  width: 100%;
   height: 100%;
   display: flex;
   padding: 10px;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   align-items: flex-start;
+  width: max(100%, 450px);
   color: ${({ theme }) => theme.colors.lt_1};
 
   @media (max-width: 1024px) {

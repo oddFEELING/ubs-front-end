@@ -10,7 +10,7 @@ import Button from '../../../lib/button/Button.component';
 const Slide = ({ ...props }) => {
   const router = useRouter();
   const { title, desc, img, buttons } = props;
-  const { footerId } = elementsStore();
+  const { footerElement } = elementsStore();
 
   return (
     <Container img={img}>
@@ -30,7 +30,7 @@ const Slide = ({ ...props }) => {
                 hv_color={data.hv_color}
                 bg={data.bg}
                 hv_bg={data.hv_bg}
-                onClick={() => data.onclick(footerId, router)}
+                onClick={() => data.onclick(footerElement, router)}
               />
             );
           })}
