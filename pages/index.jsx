@@ -10,7 +10,7 @@ import Equip from '../components/home/equip_section/Equip';
 import Facility from '../components/home/facility_section/Facility';
 import Offer from '../components/home/offer_section/Offer';
 import Testimony from '../components/home/testimony_section/Testimony';
-import Register from '../components/home/register/Register';
+import Register from '../components/home/register/Register.component';
 import AppLayout from '../layout/AppLayout';
 
 //=============================================>  COMPONENT

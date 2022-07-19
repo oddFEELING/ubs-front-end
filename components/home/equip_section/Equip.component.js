@@ -76,7 +76,6 @@ export const Title = styled.h2`
 export const Content = styled.p`
   width: 100%;
   font-weight: 400;
-  color: ${({ theme }) => theme.alpha('dk_1', 0.7)};
   font-family: ${({ theme }) => theme.fonts.sec};
   font-size: ${({ theme }) => theme.fonts.size.md};
 

@@ -9,14 +9,14 @@ export const valueData = [
     title: 'Our Mission',
     delay: 0,
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id sit sit quis tempor orci sed.',
+      'To help every child take full possession of their potentials and ensure effective utilization of their innate abilities that will position them to become outstanding leaders in the society.',
   },
   {
     icon: 'icons8:idea',
     title: 'Our Vision',
     delay: 200,
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id sit sit quis tempor orci sed.',
+      'The emergence of leaders imbued with knowledge, wisdom, integrity and committment to make selfless contributions that will impact humanity positively.',
   },
   {
     icon: 'ant-design:bar-chart-outlined',

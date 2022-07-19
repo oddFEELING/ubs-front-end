@@ -8,6 +8,11 @@ import { Container } from '../styles/login.component';
 import ErrorComponent from '../components/lib/error/Error.component';
 
 const Login = () => {
+  setTimeout(() => {
+    alert(
+      'We are currently working on this page. Click on the UBS logo to go home'
+    );
+  }, 1500);
   useEffect(() => {
     AOS.init({
       delay: 0,

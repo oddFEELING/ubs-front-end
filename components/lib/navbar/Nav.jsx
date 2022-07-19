@@ -1,10 +1,10 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 import useScroll from '../../../hooks/useScroll';
 import useMobile from '../../../hooks/useMobile';
 import { Nav_Links } from '../../../data/nav.data';
@@ -37,14 +37,16 @@ const Nav = () => {
     <Container mobile={isMobile} scrolled={scrolled}>
       {/* ====== logo */}
       <LogoDiv>
-        <Image
-          src={logoImg}
-          alt=''
-          layout='fill'
-          priority
-          placeholder='blur'
-          quality={100}
-        />
+        <Link href='/'>
+          <Image
+            src={logoImg}
+            alt=''
+            layout='fill'
+            priority
+            placeholder='blur'
+            quality={100}
+          />
+        </Link>
       </LogoDiv>
 
       {/* ====== links */}
