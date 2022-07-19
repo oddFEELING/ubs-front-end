@@ -68,9 +68,9 @@ const Equip = () => {
             With the state-of-the-art facilities and modern teaching methods, we
             make sure your child gets the best education. We specialise in
             on-demand learning—kids learn what they need when they need it so
-            they don't miss out on important lessons. Our classes are taught by
-            professional teachers with years of experience under their belt who
-            ensure a comfortable learning environment at all times. Our
+            they don&apos;t miss out on important lessons. Our classes are
+            taught by professional teachers with years of experience under their
+            belt who ensure a comfortable learning environment at all times. Our
             affordable fees make it easier for you to stick with us.
           </p>
           <p className='block text-gray-500 mt-4'>

@@ -51,17 +51,20 @@ export default function Latest() {
                 <div className='mt-6 flex items-center'>
                   <div className='flex-shrink-0'>
                     <a href={post.author.href}>
-                      <span className='sr-only'>{post.author.name}</span>
+                      <span className=' sr-only'>{post.author.name}</span>
                       <img
                         className='h-10 w-10 rounded-full'
                         src={post.author.imageUrl}
                         alt=''
+                        height='40'
+                        width='40'
+                        layout='intrinsic'
                       />
                     </a>
                   </div>
                   <div className='ml-3'>
-                    <p className='text-sm font-medium text-gray-900'>
-                      <p className=' text-color-5 '>{post.author.name}</p>
+                    <p className='text-sm font-medium  text-color-5'>
+                      {post.author.name}
                     </p>
                     <div className='flex space-x-1 text-sm text-gray-500'>
                       <time dateTime={post.datetime}>{post.date}</time>

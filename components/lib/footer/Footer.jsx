@@ -30,7 +30,7 @@ const Footer = () => {
   useEffect(() => {
     setfooterElement(footRef.current);
     console.log(footRef.current);
-  }, [footRef]);
+  }, [footRef, setfooterElement]);
 
   return (
     <Container>
