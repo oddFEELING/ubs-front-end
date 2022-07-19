@@ -3,10 +3,11 @@
 import 'aos/dist/aos.css';
 import 'swiper/css/bundle';
 import '../styles/globals.css';
-import AppLayout from '../layout/AppLayout';
+import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'styled-components';
 import ThemeObj from '../assets/theme/theme.object';
 import { ReactQueryDevtools } from 'react-query/devtools';
+import Seo from '../helpers/next-seo.config';
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
 function MyApp({ Component, pageProps }) {
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <QueryClientProvider client={client}>
       <ThemeProvider theme={ThemeObj}>
+        <DefaultSeo {...Seo} />
         {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>
       <ReactQueryDevtools initialIsOpen={false} />

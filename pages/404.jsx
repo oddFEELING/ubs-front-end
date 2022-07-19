@@ -1,7 +1,7 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Script from 'next/script';
 import styled from 'styled-components';
 
@@ -15,6 +15,10 @@ const NotFound = () => {
 
   return (
     <Container>
+      <NextSeo
+        title='UBS | 404 Not found'
+        description="Page not found or doesn't exist"
+      />
       <h1>Page Not Found</h1>
       <lottie-player
         src='https://assets3.lottiefiles.com/packages/lf20_kcsr6fcp.json'

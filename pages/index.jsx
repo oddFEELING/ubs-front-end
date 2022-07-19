@@ -12,6 +12,7 @@ import Offer from '../components/home/offer_section/Offer';
 import Testimony from '../components/home/testimony_section/Testimony';
 import Register from '../components/home/register/Register.component';
 import AppLayout from '../layout/AppLayout';
+import { NextSeo } from 'next-seo';
 
 //=============================================>  COMPONENT
 export default function Home() {
@@ -27,14 +28,10 @@ export default function Home() {
   });
   return (
     <S.Container>
-      <Head>
-        <title>UBS | Home</title>
-        <meta
-          name='description'
-          content='Unique Blossom Schools official site'
-        />
-        <link rel='icon' href='/logo.jpg' />
-      </Head>
+      <NextSeo
+        title='Unique Blossom School'
+        description='Unique Blossom Schools official site. Unique Blossom School is truly an extraordinary place of learning. Our talented staff provides each student with a rigorous standard.'
+      />
 
       <HomeHero />
       <TopSection />

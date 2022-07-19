@@ -1,7 +1,7 @@
 /** 🌹oddFEELING */
 
 import React, { useEffect } from 'react';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import AOS from 'aos';
 import AppLayout from '../layout/AppLayout';
 import { Container } from '../styles/login.component';
@@ -26,11 +26,7 @@ const Login = () => {
 
   return (
     <Container>
-      <Head>
-        <title>UBS | Login</title>
-        <meta name='description' content='Unique Blossom official site' />
-        <link rel='icon' href='/logo.jpg' />
-      </Head>
+      <NextSeo title='UBS | Login' description='ogin to students Dashboard' />
 
       <h1 style={{ position: 'absolute  ' }}>
         Login page coming soon...Try again later
