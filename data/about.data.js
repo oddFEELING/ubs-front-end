@@ -52,13 +52,13 @@ export const ExecutiveData = [
   },
   {
     image: '/executives/adetiba.jpeg',
-    name: 'Mrs. Oluwakemi Fred-Adetiba',
+    name: 'Mrs. Kemi Fred-Adetiba',
     title: 'Executive director',
     delay: 300,
   },
   {
     image: '/executives/principal.webp',
-    name: 'Mr. Tairu Aminu Arome',
+    name: 'Mr. Tairu Aminu',
     title: 'Principal',
     delay: 600,
   },

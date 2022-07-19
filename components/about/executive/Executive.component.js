@@ -32,10 +32,12 @@ const ExecutiveComponent = () => {
                   quality={100}
                 />
                 <TitleCard>
-                  <h1 className='text-white font-primary text-md mb-1 font-bold'>
+                  <h1 className='text-white font-primary text-md mb-1 font-bold xs:text-xs md:text-sm lg:text-md text-center'>
                     {data.name}
                   </h1>
-                  <p className='text-gray-300 text-sm'>{data.title}</p>
+                  <p className='text-gray-300 text-sm sm:text-xs text-center'>
+                    {data.title}
+                  </p>
                 </TitleCard>
               </ExecCard>
             );
@@ -124,12 +126,6 @@ const TitleCard = styled.div`
   background-color: ${({ theme }) => theme.colors.clr_4};
 
   @media (max-width: 480px) {
-    gap: 2px;
-    height: 50px;
-
-    h1 {
-      font-weight: 500;
-      font-size: ${({ theme }) => theme.fonts.size.md};
-    }
+    height: 60px;
   }
 `;
