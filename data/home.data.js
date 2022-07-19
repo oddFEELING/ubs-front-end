@@ -21,7 +21,9 @@ export const SlideData = [
         hv_color: ``,
         bg: `#f3f4ff`,
         hv_bg: ``,
-        onclick: () => {},
+        onclick: (element, router) => {
+          router.push('login');
+        },
       },
     ],
   },
@@ -69,7 +71,9 @@ export const SlideData = [
         hv_color: ``,
         bg: `#f3f4ff`,
         hv_bg: ``,
-        onclick: () => {},
+        onclick: (elemnt, router) => {
+          router.push('blog');
+        },
       },
     ],
   },

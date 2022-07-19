@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-export default function Example() {
+export default function Register() {
   return (
     <div className='bg-light-200 w-full m-12'>
       <div className='max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>

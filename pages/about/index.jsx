@@ -38,6 +38,7 @@ const About = () => {
       />
 
       <MainBody>
+        {/* <Main /> */}
         <Main />
         <ValueComponent />
         <ExecutiveComponent />
