@@ -45,40 +45,35 @@ export const valueData = [
 
 export const ExecutiveData = [
   {
-    image:
-      'https://images.unsplash.com/photo-1565884280295-98eb83e41c65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGJsYWNrJTIwcGVyc29ufGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+    image: '/executives/chairman.webp',
     name: 'Dr. Aimasiko',
-    title: 'Principal',
+    title: 'Chairman',
     delay: 0,
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1521119989659-a83eee488004?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500',
-    name: 'Chief Balogun',
-    title: 'Founder',
+    image: '/executives/adetiba.jpeg',
+    name: 'Mrs. Oluwakemi Fred-Adetiba',
+    title: 'Executive director',
     delay: 300,
   },
   {
-    image:
-      'https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBwZXJzb258ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    name: 'Mrs Deborah',
-    title: 'Head of School',
+    image: '/executives/principal.webp',
+    name: 'Mr. Tairu Aminu Arome',
+    title: 'Principal',
     delay: 600,
   },
 
   {
-    image:
-      'https://images.unsplash.com/photo-1621905252472-943afaa20e20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJsYWNrJTIwcGVyc29ufGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-    name: 'Daniel marker',
-    title: 'HOS',
+    image: '/executives/hos.webp',
+    name: 'Mrs. Iwuoha Jennifer',
+    title: 'Head of school',
     delay: 700,
   },
 
   {
-    image:
-      'https://images.unsplash.com/photo-1610652492500-ded49ceeb378?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGJsYWNrJTIwcGVyc29ufGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-    name: 'Daniel marker',
-    title: 'HOS',
+    image: '/executives/viceprincipal.webp',
+    name: 'Mr. Orukotan Tope',
+    title: 'Vice principal',
     delay: 700,
   },
 ];
