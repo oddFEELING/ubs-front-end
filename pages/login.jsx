@@ -9,6 +9,12 @@ import ErrorComponent from '../components/lib/error/Error.component';
 
 const Login = () => {
   useEffect(() => {
+    setTimeout(() => {
+      alert(
+        'We are currently working on this page. Click on the UBS logo to go home'
+      );
+    }, 1500);
+
     AOS.init({
       delay: 0,
       once: true,

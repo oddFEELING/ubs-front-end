@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import Hero from '../../components/lib/hero/Hero.component';
 import AppLayout from '../../layout/AppLayout';
+import Latest from '../../components/blog/Latest.component';
 
 const Blog = () => {
   useEffect(() => {
@@ -14,15 +15,7 @@ const Blog = () => {
     });
   });
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '5vh',
-      }}
-    >
+    <div className='flex flex-col gap-3 w-full items-center'>
       <Hero
         title='School Blog'
         desc='Stay up to date with NEWS and events'
@@ -31,7 +24,7 @@ const Blog = () => {
         img='/blog/blog-img.webp'
       />
 
-      <h1>Blog Coming soon</h1>
+      <Latest />
     </div>
   );
 };

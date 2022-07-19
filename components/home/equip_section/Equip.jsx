@@ -59,16 +59,25 @@ const Equip = () => {
           delay='500'
         />
 
-        <Content data-aos='fade-left' data-aos-delay='200'>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-          lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-          lobortis.
+        <Content
+          data-aos='fade-left'
+          data-aos-delay='200'
+          className='text-gray-700'
+        >
+          <p>
+            With the state-of-the-art facilities and modern teaching methods, we
+            make sure your child gets the best education. We specialise in
+            on-demand learning—kids learn what they need when they need it so
+            they don&apos;t miss out on important lessons. Our classes are
+            taught by professional teachers with years of experience under their
+            belt who ensure a comfortable learning environment at all times. Our
+            affordable fees make it easier for you to stick with us.
+          </p>
+          <p className='block text-gray-500 mt-4'>
+            At Blossom School, our mission is to create a high-quality school
+            founded on the belief that every child should have access to an
+            education that empowers them to succeed in life.
+          </p>
         </Content>
 
         <Button

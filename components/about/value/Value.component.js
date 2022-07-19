@@ -25,7 +25,9 @@ const ValueComponent = () => {
               >
                 <Icon icon={item.icon} color='white' height='40' />
                 <h4>{item.title}</h4>
-                <p>{item.content}</p>
+                <p className='text-gray-300 font-secondary text-'>
+                  {item.content}
+                </p>
               </CardBox>
             );
           })}
@@ -94,9 +96,9 @@ const CardBox = styled.div`
   }
 
   p {
-    font-weight: 500;
+    /* font-weight: 500;
     font-family: ${({ theme }) => theme.fonts.sec};
-    font-size: ${({ theme }) => theme.fonts.size.sm};
-    color: ${({ theme }) => theme.alpha('lt_2', 0.8)};
+    font-size: ${({ theme }) => theme.fonts.size.md}; */
+    /* color: ${({ theme }) => theme.alpha('lt_2', 0.8)}; */
   }
 `;

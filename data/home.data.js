@@ -21,7 +21,9 @@ export const SlideData = [
         hv_color: ``,
         bg: `#f3f4ff`,
         hv_bg: ``,
-        onclick: () => {},
+        onclick: (element, router) => {
+          router.push('login');
+        },
       },
     ],
   },
@@ -69,7 +71,9 @@ export const SlideData = [
         hv_color: ``,
         bg: `#f3f4ff`,
         hv_bg: ``,
-        onclick: () => {},
+        onclick: (elemnt, router) => {
+          router.push('blog');
+        },
       },
     ],
   },
@@ -87,21 +91,21 @@ export const TopSectionData = [
   {
     icon: `carbon:building-insights-1`,
     title: `School Events`,
-    content: `Unique blossom Schools provide kids  with  environment that is calm and  condusive for educative activities which aids easy learning.`,
+    content: `At UBS, we have created a school that is driven by creativity and innovation. Our students experience a unique balance between academic work and extracurricular activities, ensuring that they are well prepared for life after school.`,
     delay: 0,
     bg: (theme) => theme.alpha('clr_1', 0.55),
   },
   {
     icon: `simple-icons:microsoftacademic`,
     title: `Academics`,
-    content: `Unique blossom Schools provide kids  with  environment that is calm and  condusive for educative activities which aids easy learning.`,
+    content: `Unique blossom Schools provide kids  with  environment that is calm and  condusive for educative activities which aids easy learning.That’s why our focus is on what matters most`,
     delay: 200,
     bg: (theme) => theme.alpha('clr_2', 0.55),
   },
   {
     icon: `heroicons-outline:academic-cap`,
     title: `Admissions`,
-    content: `Unique blossom Schools provide kids  with  environment that is calm and  condusive for educative activities which aids easy learning.`,
+    content: `Unique blossom Schools deliver world-class educational services with easy to complete admission processes.`,
     delay: 400,
     bg: (theme) => theme.alpha('clr_3', 0.55),
   },
@@ -112,19 +116,19 @@ export const facilityData = [
   {
     icon: `emojione-monotone:money-bag`,
     title: `Affordable Fees`,
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.`,
+    content: ` If you’re looking for an economical school that offers modern facilities and affordable tuition fees, then you’ve come to the right place.`,
     delay: 0,
   },
   {
     icon: `carbon:report`,
     title: `Standard laboratories`,
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.`,
+    content: ` The school has well equipped labs and provides the students with modern technology. It was built with the goal of making learning fun for all its students by providing a home like atmosphere and helping them enjoy their education.`,
     delay: 100,
   },
   {
     icon: `emojione-monotone:trophy`,
     title: `Excellent track record`,
-    content: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.`,
+    content: `Proven to be an excellent school with the best scores in programs and an excellent track record in all areas.`,
     delay: 200,
   },
 ];

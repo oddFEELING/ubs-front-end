@@ -1,29 +1,24 @@
 /** 🌹oddFEELING */
 
-import styled from 'styled-components';
+import Link from 'next/link';
 
-export const Container = styled.section`
-  gap: 3vh;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  padding: 50px 10vw;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  height: max(40vh, 500px);
-`;
-
-export const Title = styled.h3`
-  font-weight: 900;
-  letter-spacing: 2px;
-  color: ${({ theme }) => theme.colors.dk_1};
-  font-size: ${({ theme }) => theme.fonts.size.xl};
-`;
-
-export const Content = styled.p`
-  font-weight: 500;
-  font-family: ${({ theme }) => theme.fonts.sec};
-  font-size: ${({ theme }) => theme.fonts.size.lg};
-  color: ${({ theme }) => theme.alpha('dk_1', 0.5)};
-`;
+export default function Register() {
+  return (
+    <div className='bg-light-200 w-full m-12'>
+      <div className='max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>
+        <h2 className='text-3xl font-extrabold text-dark-100 sm:text-4xl font-primary'>
+          Do you believe in the <b className='text-color-5'>Best?</b>.
+        </h2>
+        <p className='mt-4 text-lg leading-6 text-dark-200'>
+          Make the right choice for your ward by enrolling them in a school with
+          a learning environment that is conducive to success.
+        </p>
+        <Link href='login' passHref>
+          <a className='mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-light-200 bg-color-1 hover:bg-color-2 sm:w-auto'>
+            Admissions
+          </a>
+        </Link>
+      </div>
+    </div>
+  );
+}

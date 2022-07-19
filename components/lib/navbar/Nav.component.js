@@ -52,11 +52,12 @@ export const Container = styled.div`
 // ======= logo div -->
 export const LogoDiv = styled.span`
   width: 60px;
-  height: max(50px, 50%);
   display: flex;
+  cursor: pointer;
   position: relative;
   align-items: center;
-  justify-content: center; ;
+  justify-content: center;
+  height: max(50px, 50%);
 `;
 
 // ======= desktop nav -->

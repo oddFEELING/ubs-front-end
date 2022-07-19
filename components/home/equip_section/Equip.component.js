@@ -73,10 +73,9 @@ export const Title = styled.h2`
 `;
 
 // ======= content -->
-export const Content = styled.p`
+export const Content = styled.div`
   width: 100%;
   font-weight: 400;
-  color: ${({ theme }) => theme.alpha('dk_1', 0.7)};
   font-family: ${({ theme }) => theme.fonts.sec};
   font-size: ${({ theme }) => theme.fonts.size.md};
 
