@@ -11,7 +11,7 @@ const TestimonyCard = ({ ...props }) => {
       {/* ====== title */}
       <Title>{title}</Title>
       {/* ====== content */}
-      <Content>{content}</Content>
+      <p className='font-secondary p-3 sm:text-md text-lg '>{content}</p>
 
       {/* ====== Parent image */}
       <PicFrame>
@@ -29,8 +29,8 @@ export default TestimonyCard;
 
 const Container = styled.div`
   display: flex;
-  height: 480px;
-  gap: 30px;
+  height: 420px;
+  gap: 15px;
   position: relative;
   border-radius: 8px;
   text-align: center;

@@ -46,7 +46,7 @@ export const valueData = [
 export const ExecutiveData = [
   {
     image: '/executives/chairman.webp',
-    name: 'Dr. Aimasiko',
+    name: 'Deac. Olusegun Olubo',
     title: 'Chairman',
     delay: 0,
   },

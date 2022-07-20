@@ -11,10 +11,19 @@ const OfferCard = ({ ...props }) => {
   const { img, title, content, sx, clr } = props;
   return (
     <Container bg={img} style={sx}>
-      <Title data-aos='fade-right'>{title}</Title>
-      <Content data-aos='fade-right' data-aos-delay='300'>
+      <h2
+        data-aos='fade-right'
+        className='sm:text-xl md:text-3xl lg:text-2xl text-white font-bold'
+      >
+        {title}
+      </h2>
+      <p
+        className='text-gray-300 sm:text-xs lg:text-lmd'
+        data-aos='fade-right'
+        data-aos-delay='300'
+      >
         {content}
-      </Content>
+      </p>
       <Button
         text='View more'
         sx={{
@@ -38,7 +47,7 @@ const Container = styled.div`
   padding: 5% 8%;
   flex-direction: column;
   width: max(300px, 20vw);
-  height: max(500px, 35vh);
+  height: max(450px, 32vh);
   background: ${({ bg }) =>
     `linear-gradient(to bottom, rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.8)),
     url(${bg})`};
@@ -62,18 +71,4 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
   }
-`;
-
-const Title = styled.h3`
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.lt_1};
-  font-size: ${({ theme }) => theme.fonts.size.lg};
-`;
-
-const Content = styled.p`
-  font-weight: 400;
-  margin-top: -1vh;
-  font-family: ${({ theme }) => theme.fonts.sec};
-  font-size: ${({ theme }) => theme.fonts.size.md};
-  color: ${({ theme }) => theme.alpha('lt_1', 0.7)};
 `;

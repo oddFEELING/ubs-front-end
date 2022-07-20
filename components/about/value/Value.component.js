@@ -66,13 +66,13 @@ const Title = styled.h3`
 `;
 
 const CardWrapper = styled.div`
-  gap: 3vw;
   display: grid;
   justify-items: center;
   align-items: center;
   grid-template-areas: 'card_1 card_2 card_3';
 
   @media (max-width: 1200px) {
+    gap: 3vh;
     grid-template-areas:
       'card_1'
       'card_2'
