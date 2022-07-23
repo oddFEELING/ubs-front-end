@@ -1,170 +1,131 @@
-/** 🌹oddFEELING */
+import { useRef, useEffect } from 'react';
+import Mailchimp from '../mailchimp/Mailchimp.component';
+import { elementsStore } from '../../../context/element.context';
+import { navigation } from '../../../data/footer.data';
 
-import styled from 'styled-components';
+export default function Footer() {
+  const footRef = useRef();
+  const { setfooterElement } = elementsStore();
 
-export const Container = styled.footer`
-  gap: 50px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  min-height: 500px;
-  padding-top: 20px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: ${({ theme }) => theme.colors.clr_4};
-`;
+  useEffect(() => {
+    setfooterElement(footRef.current);
+  }, [footRef, setfooterElement]);
+  return (
+    <footer
+      className='bg-color-4'
+      aria-labelledby='footer-heading'
+      ref={footRef}
+    >
+      <h2 id='footer-heading' className='sr-only'>
+        Footer
+      </h2>
+      <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8'>
+        <div className='xl:grid xl:grid-cols-3 xl:gap-8'>
+          <div className='grid grid-cols-2 gap-8 xl:col-span-2'>
+            <div className='md:grid md:grid-cols-2 md:gap-8'>
+              <div>
+                <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
+                  Admission
+                </h3>
+                <ul role='list' className='mt-4 space-y-4'>
+                  {navigation.admissions.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className='text-base text-gray-300 hover:text-white'
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className='mt-12 md:mt-0'>
+                <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
+                  Support
+                </h3>
+                <ul role='list' className='mt-4 space-y-4'>
+                  {navigation.support.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className='text-base text-gray-300 hover:text-white'
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className='md:grid md:grid-cols-2 md:gap-8'>
+              <div>
+                <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
+                  School
+                </h3>
+                <ul role='list' className='mt-4 space-y-4'>
+                  {navigation.school.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className='text-base text-gray-300 hover:text-white'
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className='mt-12 md:mt-0'>
+                <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
+                  Events
+                </h3>
+                <ul role='list' className='mt-4 space-y-4'>
+                  {navigation.events.map((item) => (
+                    <li key={item.name}>
+                      <a
+                        href={item.href}
+                        className='text-base text-gray-300 hover:text-white'
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className='mt-8 xl:mt-0'>
+            <h3 className='text-lg font-semibold text-white tracking-wider uppercase'>
+              Subscribe to our newsletter
+            </h3>
+            <p className='mt-4 text-base text-gray-300'>
+              Be the first to know!
+            </p>
 
-//=============================================>  title section
-export const TitleWrapper = styled.div`
-  gap: 40px;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  padding: 10px 5vw;
-  align-items: center;
-  font-size: ${({ theme }) => theme.fonts.size.lg};
-  color: ${({ theme }) => theme.colors.lt_2};
-`;
-
-export const LogoDiv = styled.div`
-  width: 50px;
-  height: 50px;
-  position: relative;
-`;
-
-//=============================================>  Middle section
-export const MiddleSection = styled.div`
-  gap: 40px;
-  width: 100%;
-  display: grid;
-  padding: 0 8vw;
-  align-items: center;
-  grid-template-areas:
-    'card_1 card_2'
-    'card_1 card_2'
-    'card_1 card_3';
-  align-items: center;
-  justify-items: center;
-
-  @media (max-width: 1024px) {
-    grid-template-areas:
-      'card_1'
-      'card_2'
-      'card_3';
-    padding: 0 20px;
-  }
-`;
-
-// ======= Contact section -->
-export const ContactDiv = styled.div`
-  gap: 5px;
-  min-width: 300px;
-  height: 100%;
-  display: flex;
-  grid-area: card_1;
-  align-self: start;
-  padding-left: 40px;
-  /* background-color: red; */
-  flex-direction: column;
-  justify-content: space-between;
-  border-left: thin solid ${({ theme }) => theme.colors.lt_1};
-
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
-`;
-
-export const ContactCard = styled.div`
-  gap: 25px;
-  width: 100%;
-  height: auto;
-  display: flex;
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    height: 1 00px;
-  }
-`;
-
-export const ContactText = styled.span`
-  gap: 15px;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-
-  h3 {
-    font-weight: 600;
-    padding-left: 15px;
-    font-size: ${({ theme }) => theme.fonts.size.md};
-    color: ${({ theme }) => theme.colors.lt_1};
-    border-left: 2px solid ${({ theme }) => theme.colors.clr_2};
-  }
-
-  p {
-    font-weight: 400;
-    font-family: ${({ theme }) => theme.fonts.sec};
-    font-size: ${({ theme }) => theme.fonts.size.sm};
-    color: ${({ theme }) => theme.alpha('lt_2', 0.8)};
-  }
-`;
-// ======= subscribe section -->
-export const SubscribeDiv = styled.div`
-  gap: 20px;
-  height: 100%;
-  display: flex;
-  padding: 10px;
-  align-items: center;
-  flex-direction: column;
-  align-items: flex-start;
-  width: max(100%, 450px);
-  color: ${({ theme }) => theme.colors.lt_1};
-
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
-`;
-
-// ======= socials secction -->
-export const SocialDiv = styled.div`
-  gap: 10px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding: 20px;
-  grid-area: card_3;
-  letter-spacing: 1px;
-  flex-direction: column;
-  color: ${({ theme }) => theme.colors.lt_1};
-
-  .icon-wrapper {
-    display: flex;
-    padding: 10px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    transition: ${({ theme }) => theme.transition.smooth};
-    border: 2px solid ${({ theme }) => theme.colors.clr_2};
-
-    &:hover {
-      transform: translateY(-5px) scale(1.03);
-      border: 2px solid ${({ theme }) => theme.alpha('lt_1', 0.7)};
-    }
-  }
-`;
-
-export const SocialWrapper = styled.div`
-  gap: 30px;
-  width: 100%;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  border-left: thin solid ${({ theme }) => theme.colors.lt_1};
-`;
-//=============================================>  Bottom dark bar
-export const DarkSection = styled.div`
-  width: 100%;
-  height: 50px;
-  background-color: ${({ theme }) => theme.colors.dk_1};
-`;
+            {/* ====== ## MAILCHIMP FORM  */}
+            <Mailchimp />
+          </div>
+        </div>
+        <div className='mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between'>
+          <div className='flex space-x-6 md:order-2'>
+            {navigation.social.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className='text-gray-400 hover:text-gray-300'
+              >
+                <span className='sr-only'>{item.name}</span>
+                <item.icon className='h-6 w-6' aria-hidden='true' />
+              </a>
+            ))}
+          </div>
+          <p className='mt-8 text-base text-gray-400 md:mt-0 md:order-1'>
+            &copy; 2022 Unique Blossom, Inc. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <div className='w-full h-8 bg-dark-100'> </div>
+    </footer>
+  );
+}

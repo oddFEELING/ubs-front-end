@@ -31,11 +31,11 @@ const ExecutiveComponent = () => {
                   objectFit='cover'
                   quality={100}
                 />
-                <TitleCard>
-                  <h1 className='text-white font-primary text-md mb-1 font-bold xs:text-xs md:text-sm lg:text-md text-center'>
+                <TitleCard data-aos='fade-up'>
+                  <h1 className='text-white font-primary text-md mb-1 font-bold text-xs md:text-sm lg:text-md lg:text-lg text-center'>
                     {data.name}
                   </h1>
-                  <p className='text-gray-300 text-sm sm:text-xs text-center'>
+                  <p className='text-gray-300 text-xs sm:text-sm text-center'>
                     {data.title}
                   </p>
                 </TitleCard>
@@ -88,6 +88,7 @@ const ExecCard = styled.div`
   width: 300px;
   height: 450px;
   display: flex;
+  overflow: hidden;
   position: relative;
   align-items: center;
   border-radius: 10px;
@@ -112,18 +113,20 @@ const Title = styled.h2`
 `;
 
 const TitleCard = styled.div`
-  width: 80%;
-  bottom: -40px;
-  display: flex;
+  width: 85%;
+  bottom: 16px;
   height: 80px;
+  display: flex;
   position: absolute;
   border-radius: 10px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  backdrop-filter: blur(4px);
   color: ${({ theme }) => theme.colors.lt_1};
-  box-shadow: ${({ theme }) => theme.shadow.sd_4};
-  background-color: ${({ theme }) => theme.colors.clr_4};
+  box-shadow: ${({ theme }) => theme.shadow.sd_5};
+  box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.2);
+  background-color: ${({ theme }) => theme.alpha('clr_4', 0.9)};
 
   @media (max-width: 480px) {
     height: 60px;

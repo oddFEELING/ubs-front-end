@@ -3,6 +3,7 @@ module.exports = {
   content: [
     './pages/**/*.{js,jsx,ts,tsx}',
     './components/**/*.{js,jsx,ts,tsx}',
+    './layout/**/*.{js,jsx,ts,tsx}',
   ],
 
   theme: {
@@ -28,6 +29,7 @@ module.exports = {
         'light-200': '#f3f4ff',
         'dark-100': '#1A1A1A',
         'dark-200': '#393939',
+        cyan: '#83D9EC',
       },
     },
   },
@@ -35,5 +37,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio', require('@tailwindcss/forms')),
+    require('@tailwindcss/line-clamp'),
   ],
 };
