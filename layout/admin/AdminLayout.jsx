@@ -69,10 +69,11 @@ export default function AdminLayout({ children }) {
                   </Transition.Child>
                   <div className='flex-1 h-0 pt-5 pb-4 overflow-y-auto'>
                     <div className='flex-shrink-0 flex items-center px-4'>
-                      <img
-                        className='h-8 w-auto'
-                        src='https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg'
-                        alt='Workflow'
+                      <Image
+                        alt='ubs logo'
+                        src={LogoImg}
+                        width={40}
+                        height={35}
                       />
                     </div>
                     <nav className='mt-5 px-2 space-y-1'>
@@ -104,11 +105,12 @@ export default function AdminLayout({ children }) {
                   <div className='flex-shrink-0 flex bg-gray-700 p-4'>
                     <a href='#' className='flex-shrink-0 group block'>
                       <div className='flex items-center'>
-                        <div>
-                          <img
-                            className='inline-block h-10 w-10 rounded-full'
-                            src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
-                            alt=''
+                        <div className='rounded-full overflow-hidden shadow-md'>
+                          <Image
+                            alt='ubs logo'
+                            src='https://images.unsplash.com/photo-1658458053585-e4f431bf4398?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'
+                            width={45}
+                            height={40}
                           />
                         </div>
                         <div className='ml-3'>
@@ -168,11 +170,12 @@ export default function AdminLayout({ children }) {
             <div className='flex-shrink-0 flex bg-gray-700 p-4'>
               <a href='#' className='flex-shrink-0 w-full group block'>
                 <div className='flex items-center'>
-                  <div>
-                    <img
-                      className='inline-block h-9 w-9 rounded-full'
+                  <div className='rounded-full overflow-hidden shadow-md'>
+                    <Image
+                      alt='ubs logo'
                       src='https://images.unsplash.com/photo-1658458053585-e4f431bf4398?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60'
-                      alt=''
+                      width={45}
+                      height={40}
                     />
                   </div>
                   <div className='ml-3'>

@@ -42,4 +42,8 @@ a {
   .newsletter__form-section {
     @apply flex items-center justify-center gap-2 flex-col md:flex-row;
   }
+
+  .contact__form-input {
+    @apply bg-color-5 focus:outline-cyan border-none outline-1 focus:outline-none md:text-lg font-secondary rounded-md text-sm w-full h-12 px-11 py-4 block;
+  }
 }

@@ -3,7 +3,6 @@ import { Dialog, Transition } from '@headlessui/react';
 import { CheckIcon } from '@heroicons/react/outline';
 
 export default function MessageModal({ open, setOpen, data }) {
-  console.log(data);
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as='div' className='relative z-10' onClose={setOpen}>

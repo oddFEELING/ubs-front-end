@@ -106,7 +106,7 @@ export default function Admin() {
             </div>
           </div>
         </div>
-        <div className='hidden relative lg:block relative w-0 flex-1'>
+        <div className='hidden relative lg:block w-0 flex-1'>
           <Image
             className='absolute inset-0 h-full w-full object-cover'
             src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c2Nob29sfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=1908&q=80'
