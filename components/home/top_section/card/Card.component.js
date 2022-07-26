@@ -1,7 +1,6 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
-import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import styled from 'styled-components';
 
@@ -12,7 +11,7 @@ const Card = ({ ...props }) => {
     <Container style={sx} bg={bg} data-aos='fade-up' data-aos-delay={delay}>
       <Icon icon={icon} color='white' height='60' />
       <Title>{title}</Title>
-      <Content>{content}</Content>
+      <p className='text-gray-300 text-sm p-6 text-center'>{content}</p>
     </Container>
   );
 };
@@ -29,7 +28,7 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   width: max(250px, 20vw);
-  height: max(450px, 30vh);
+  height: max(400px, 25vh);
   justify-content: flex-start;
   color: ${({ theme }) => theme.colors.lt_1};
   background-color: ${({ theme, bg }) => bg && bg(theme)};
@@ -49,12 +48,4 @@ const Container = styled.div`
 const Title = styled.h3`
   font-weight: 600;
   font-size: ${({ theme }) => theme.fonts.size.lg};
-`;
-
-const Content = styled.p`
-  width: 70%;
-  font-weight: 400;
-  font-family: ${({ theme }) => theme.fonts.sec};
-  font-size: ${({ theme }) => theme.fonts.size.md};
-  color: ${({ theme }) => theme.alpha('lt_1', 0.7)};
 `;

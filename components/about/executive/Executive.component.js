@@ -31,9 +31,13 @@ const ExecutiveComponent = () => {
                   objectFit='cover'
                   quality={100}
                 />
-                <TitleCard>
-                  <h1>{data.name}</h1>
-                  <p>{data.title}</p>
+                <TitleCard data-aos='fade-up'>
+                  <h1 className='text-white font-primary text-md mb-1 font-bold text-xs md:text-sm lg:text-md lg:text-lg text-center'>
+                    {data.name}
+                  </h1>
+                  <p className='text-gray-300 text-xs sm:text-sm text-center'>
+                    {data.title}
+                  </p>
                 </TitleCard>
               </ExecCard>
             );
@@ -84,6 +88,7 @@ const ExecCard = styled.div`
   width: 300px;
   height: 450px;
   display: flex;
+  overflow: hidden;
   position: relative;
   align-items: center;
   border-radius: 10px;
@@ -108,37 +113,22 @@ const Title = styled.h2`
 `;
 
 const TitleCard = styled.div`
-  width: 80%;
-  bottom: -40px;
-  display: flex;
+  width: 85%;
+  bottom: 16px;
   height: 80px;
+  display: flex;
   position: absolute;
   border-radius: 10px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  backdrop-filter: blur(4px);
   color: ${({ theme }) => theme.colors.lt_1};
-  box-shadow: ${({ theme }) => theme.shadow.sd_4};
-  background-color: ${({ theme }) => theme.colors.clr_4};
-
-  h1 {
-    font-weight: 700;
-    font-size: ${({ theme }) => theme.fonts.size.lg};
-  }
-
-  p {
-    font-weight: 500;
-    font-family: ${({ theme }) => theme.fonts.sec};
-    font-size: ${({ theme }) => theme.fonts.size.sm};
-  }
+  box-shadow: ${({ theme }) => theme.shadow.sd_5};
+  box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.2);
+  background-color: ${({ theme }) => theme.alpha('clr_4', 0.9)};
 
   @media (max-width: 480px) {
-    gap: 2px;
-    height: 50px;
-
-    h1 {
-      font-weight: 500;
-      font-size: ${({ theme }) => theme.fonts.size.md};
-    }
+    height: 60px;
   }
 `;

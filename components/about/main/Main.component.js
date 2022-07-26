@@ -54,7 +54,7 @@ export default function Main() {
             </svg>
             <div className='relative text-base mx-auto max-w-prose lg:max-w-none'>
               <figure>
-                <div className='overflow-hidden aspect-w-12 aspect-h-7 lg:aspect-none sm:h-36 md:h-36 lg:h-1/3'>
+                <div className='aspect-w-12 lg:aspect-none sm:h-36 md:h-36 lg:h-1/3'>
                   <Image
                     className='rounded-lg shadow-lg object-cover object-center'
                     src={CopyImg}

@@ -1,7 +1,7 @@
 /** 🌹oddFEELING */
 
 import AOS from 'aos';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import AppLayout from '../layout/AppLayout';
 import React, { useEffect } from 'react';
 import * as S from '../styles/Contact.component';
@@ -19,11 +19,10 @@ const Contact = () => {
 
   return (
     <S.Container>
-      <Head>
-        <title>UBS | Contact</title>
-        <meta name='description' content='Unique Blossom official site' />
-        <link rel='icon' href='/logo.jpg' />
-      </Head>
+      <NextSeo
+        title='UBS | Contact'
+        description='Get in touch with us through any of our social media links or walk into the school from 7:30am - 4:00pm weekdays.'
+      />
 
       <Hero
         title='Get in Touch'

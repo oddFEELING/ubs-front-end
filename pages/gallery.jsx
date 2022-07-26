@@ -1,8 +1,8 @@
 /** 🌹oddFEELING */
 
 import AOS from 'aos';
-import axios from 'axios';
 import Script from 'next/script';
+import { NextSeo } from 'next-seo';
 import React, { useEffect } from 'react';
 import Hero from '../components/lib/hero/Hero.component';
 import { galleryStore } from '../context/gallery.context';
@@ -36,6 +36,10 @@ const Gallery = () => {
 
   return (
     <Contaoiner>
+      <NextSeo
+        title='UBS | Gallery'
+        description='See us in glorious moments as we showcase some of our notable events, people, alumni and so much much!'
+      />
       <Script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js' />
       <Hero
         title='Picture Gallery'

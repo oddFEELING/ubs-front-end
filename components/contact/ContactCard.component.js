@@ -85,6 +85,7 @@ const Card = styled.div`
   height: 250px;
   display: flex;
   padding: 40px;
+  border-radius: 8px;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.clr_5};
 

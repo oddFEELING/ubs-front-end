@@ -15,8 +15,15 @@ const Slide = ({ ...props }) => {
   return (
     <Container img={img}>
       <TextArea>
-        <Title>{title && title}</Title>
-        <Desc>{desc && desc}</Desc>
+        {/* ====== ## TITLE TEXT */}
+        <h2 className=' text-white font-primary font-bold mb-3 m-0 text-4xl md:text-7xl'>
+          {title && title}
+        </h2>
+
+        {/* ====== ## DESCRIPTION TEXT */}
+        <p className='text-gray-300 font-secondary text-xl md:text-2xl m-0'>
+          {desc && desc}
+        </p>
       </TextArea>
 
       <BtnArea>
@@ -79,25 +86,6 @@ const TextArea = styled.section`
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
-`;
-
-const Title = styled.h1`
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: ${({ theme }) => theme.colors.lt_1};
-  font-size: ${({ theme }) => theme.fonts.size.xxl};
-
-  @media screen and (max-width: 1024px) {
-    font-size: ${({ theme }) => theme.fonts.size.xl};
-  }
-`;
-
-const Desc = styled.h3`
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-family: ${({ theme }) => theme.fonts.sec};
-  color: ${({ theme }) => theme.alpha('lt_1', 0.7)};
-  font-size: ${({ theme }) => theme.fonts.size.md};
 `;
 
 // ======= button section -->

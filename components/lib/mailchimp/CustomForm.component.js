@@ -1,8 +1,6 @@
 /** 🌹oddFEELING */
 
-import styled from 'styled-components';
 import React, { useState, useEffect, useRef } from 'react';
-import Button from '../button/Button.component';
 
 //=============================================>  # RENDER
 const CustomFormComponent = (props) => {
@@ -42,111 +40,59 @@ const CustomFormComponent = (props) => {
         MERGE2: phone,
       });
   };
+
   return (
-    <Form onSubmit={(e) => handleSubmit(e)} method='POST' ref={mailform}>
-      <Section>
+    <form
+      onSubmit={(e) => handleSubmit(e)}
+      method='POST'
+      ref={mailform}
+      className='newsletter__form'
+    >
+      <section className='newsletter__form-section'>
         {/* ====== email */}
-        <Input
+        <input
           required
           type='email'
           value={email}
           placeholder='email'
+          className='newsletter__form-input'
           onChange={(e) => setEmail(e.target.value)}
         />
         {/* ====== title field */}
-        <Input
+        <input
           required
           type='text'
           value={lastname}
           placeholder='last name'
+          className='newsletter__form-input'
           onChange={(e) => setLastname(e.target.value)}
         />
-      </Section>
-      <Section style={{ marginTop: '-2vh' }}>
+      </section>
+      <section className='newsletter__form-section'>
         {/* ====== first name */}
-        <Input
+        <input
           required
           type='text'
           value={name}
           placeholder='first name'
+          className='newsletter__form-input'
           onChange={(e) => setName(e.target.value)}
         />
         {/* ====== phone */}
-        <Input
+        <input
           required
           type='tel'
           value={phone}
           minLength={10}
           placeholder='phone number'
+          className='newsletter__form-input'
           onChange={(e) => setPhone(e.target.value)}
         />
-      </Section>
+      </section>
 
-      <Button
-        text={text}
-        onClick={handleSubmit}
-        bg={() => {
-          if (status === 'success') return '#27E746';
-          if (status === 'error') return '#E72727';
-          if (status === 'sending') return '#83D9EC';
-          return '#E72727';
-        }}
-        color={() => {
-          if (status === 'sending') return '#393939';
-          return '#f3f4ff';
-        }}
-      />
-    </Form>
+      <button className='newsletter__form-submit'>{text}</button>
+    </form>
   );
 };
 
 export default CustomFormComponent;
-
-//=============================================>  # COMPONENT
-const Form = styled.form`
-  gap: 3vh;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const Input = styled.input`
-  width: 100%;
-  height: 50px;
-  border: none;
-  padding: 15px;
-  font-weight: 300;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  color: ${({ theme }) => theme.colors.lt_2};
-  font-family: ${({ theme }) => theme.fonts.sec};
-  font-size: ${({ theme }) => theme.fonts.size.md};
-  background-color: ${({ theme }) => theme.colors.clr_5};
-  transition: ${({ theme }) => theme.transition.smooth};
-
-  &:focus {
-    outline: thin solid ${({ theme }) => theme.alpha('lt_2', 0.7)};
-  }
-
-  &::placeholder {
-    color: ${({ theme }) => theme.alpha('lt_2', 0.4)};
-  }
-
-  @media (max-width: 800px) {
-    height: 45px;
-  }
-`;
-
-const Section = styled.section`
-  gap: 10px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
-  }
-`;

@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import AOS from 'aos';
+import { NextSeo } from 'next-seo';
 import Hero from '../../components/lib/hero/Hero.component';
 import AppLayout from '../../layout/AppLayout';
 import Latest from '../../components/blog/Latest.component';
@@ -16,6 +17,10 @@ const Blog = () => {
   });
   return (
     <div className='flex flex-col gap-3 w-full items-center'>
+      <NextSeo
+        title='UBS | Blog'
+        description='Keep up with Unique blossom. Select from our list of well sort out articles to keep up to date with latest announcments, data, events, news and many more.'
+      />
       <Hero
         title='School Blog'
         desc='Stay up to date with NEWS and events'

@@ -52,12 +52,12 @@ export default function Latest() {
                   <div className='flex-shrink-0'>
                     <a href={post.author.href}>
                       <span className=' sr-only'>{post.author.name}</span>
-                      <img
+                      <Image
                         className='h-10 w-10 rounded-full'
                         src={post.author.imageUrl}
                         alt=''
-                        height='40'
-                        width='40'
+                        height={40}
+                        width={40}
                         layout='intrinsic'
                       />
                     </a>

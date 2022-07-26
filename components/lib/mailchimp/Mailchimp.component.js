@@ -1,7 +1,6 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
-import styled from 'styled-components';
 import CustomFormComponent from './CustomForm.component';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
@@ -16,22 +15,13 @@ const MailchimpComponent = () => {
   );
 
   return (
-    <Container>
+    <div className='flex items-center justify-center w-full my-2'>
       <MailchimpSubscribe
         url={process.env.NEXT_PUBLIC_MAILCHIMP_URL}
         render={renderFunction}
       />
-    </Container>
+    </div>
   );
 };
 
 export default MailchimpComponent;
-
-const Container = styled.section`
-  width: 100%;
-  height: 80%;
-  display: flex;
-  padding-left: 50px;
-  align-items: flex-start;
-  border-left: thin solid ${({ theme }) => theme.colors.lt_1};
-`;
