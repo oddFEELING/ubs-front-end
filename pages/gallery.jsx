@@ -35,12 +35,12 @@ const Gallery = () => {
 
     // Google tag (gtag.js)
 
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag() {
-    //   dataLayer.push(arguments);
-    // }
-    // gtag('js', new Date());
-    // gtag('config', 'G-D3JFLYDHTJ');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-D3JFLYDHTJ');
   }, []);
 
   return (
@@ -54,10 +54,11 @@ const Gallery = () => {
       <Script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js' />
 
       {/* ====== google analytics script */}
-      {/* <Script
+      <Script
         async
+        strategy='lazyOnload'
         src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
-      ></Script> */}
+      ></Script>
 
       <Hero
         title='Picture Gallery'

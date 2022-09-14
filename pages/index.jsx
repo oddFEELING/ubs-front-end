@@ -29,12 +29,12 @@ export default function Home() {
 
     // Google tag (gtag.js)
 
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag() {
-    //   dataLayer.push(arguments);
-    // }
-    // gtag('js', new Date());
-    // gtag('config', 'G-D3JFLYDHTJ');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-D3JFLYDHTJ');
   }, []);
 
   return (
@@ -43,10 +43,11 @@ export default function Home() {
         title='Unique Blossom School'
         description='Unique Blossom Schools official site. Unique Blossom School is truly an extraordinary place of learning. Our talented staff provides each student with a rigorous standard.'
       />
-      {/* <Script
+      <Script
         async
+        strategy='lazyOnload'
         src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
-      ></Script> */}
+      ></Script>
 
       <HomeHero />
       <TopSection />

@@ -24,12 +24,12 @@ const About = () => {
 
     // Google tag (gtag.js)
 
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag() {
-    //   dataLayer.push(arguments);
-    // }
-    // gtag('js', new Date());
-    // gtag('config', 'G-D3JFLYDHTJ');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-D3JFLYDHTJ');
   }, []);
 
   return (
@@ -40,10 +40,11 @@ const About = () => {
       />
 
       {/* ====== google analytics */}
-      {/* <Script
+      <Script
         async
+        strategy='lazyOnload'
         src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
-      ></Script> */}
+      ></Script>
 
       <Hero
         title='Get to know us better'

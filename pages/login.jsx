@@ -29,22 +29,23 @@ const Login = () => {
 
     // Google tag (gtag.js)
 
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag() {
-    //   dataLayer.push(arguments);
-    // }
-    // gtag('js', new Date());
-    // gtag('config', 'G-D3JFLYDHTJ');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-D3JFLYDHTJ');
   }, []);
 
   return (
     <Container>
       <NextSeo title='UBS | Login' description='ogin to students Dashboard' />
 
-      {/* <Script
+      <Script
+        strategy='lazyOnload'
         async
         src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
-      ></Script> */}
+      ></Script>
 
       <h1 style={{ position: 'absolute  ' }}>
         Login page coming soon...Try again later

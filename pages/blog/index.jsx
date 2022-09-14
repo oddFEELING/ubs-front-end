@@ -14,13 +14,30 @@ const Blog = () => {
       offset: 0,
       disable: 'mobile',
     });
-  });
+
+    // Google tag (gtag.js)
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-D3JFLYDHTJ');
+  }, []);
   return (
     <div className='flex flex-col gap-3 w-full items-center'>
       <NextSeo
         title='UBS | Blog'
         description='Keep up with Unique blossom. Select from our list of well sort out articles to keep up to date with latest announcments, data, events, news and many more.'
       />
+
+      {/* ====== google analytics */}
+      <Script
+        async
+        strategy='lazyOnload'
+        src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
+      ></Script>
+
       <Hero
         title='School Blog'
         desc='Stay up to date with NEWS and events'
