@@ -2,9 +2,10 @@
 
 import AOS from 'aos';
 import Head from 'next/head';
+import Script from 'next/script';
+import { NextSeo } from 'next-seo';
 import React, { useEffect } from 'react';
 import AppLayout from '../layout/AppLayout';
-import { NextSeo } from 'next-seo';
 import { MainBody } from '../styles/about/about.component';
 import Hero from '../components/lib/hero/Hero.component';
 import Main from '../components/about/main/Main.component';
@@ -20,7 +21,16 @@ const About = () => {
       duration: 800,
       disable: 'phone',
     });
-  });
+
+    // Google tag (gtag.js)
+
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag() {
+    //   dataLayer.push(arguments);
+    // }
+    // gtag('js', new Date());
+    // gtag('config', 'G-D3JFLYDHTJ');
+  }, []);
 
   return (
     <div>
@@ -28,6 +38,12 @@ const About = () => {
         title='UBS | About'
         description='Get to know more about us here at Unique Blossom'
       />
+
+      {/* ====== google analytics */}
+      {/* <Script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
+      ></Script> */}
 
       <Hero
         title='Get to know us better'

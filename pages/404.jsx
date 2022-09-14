@@ -1,8 +1,9 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
-import { NextSeo } from 'next-seo';
 import Script from 'next/script';
+import { useEffect } from 'react';
+import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 
 //=============================================>  RENDER
@@ -12,6 +13,15 @@ const NotFound = () => {
     height: '100%',
     position: 'absolute',
   };
+  useEffect(() => {
+    // Google tag (gtag.js)
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag() {
+    //   dataLayer.push(arguments);
+    // }
+    // gtag('js', new Date());
+    // gtag('config', 'G-D3JFLYDHTJ');
+  }, []);
 
   return (
     <Container>
@@ -19,6 +29,13 @@ const NotFound = () => {
         title='UBS | 404 Not found'
         description="Page not found or doesn't exist"
       />
+
+      {/* ====== google analytics */}
+      {/* <Script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
+      ></Script> */}
+
       <h1>Page Not Found</h1>
       <lottie-player
         src='https://assets3.lottiefiles.com/packages/lf20_kcsr6fcp.json'

@@ -13,6 +13,7 @@ import Testimony from '../components/home/testimony_section/Testimony';
 import Register from '../components/home/register/Register.component';
 import AppLayout from '../layout/AppLayout';
 import { NextSeo } from 'next-seo';
+import Script from 'next/script';
 
 //=============================================>  COMPONENT
 export default function Home() {
@@ -25,13 +26,27 @@ export default function Home() {
       duration: 800,
       disable: 'phone',
     });
-  });
+
+    // Google tag (gtag.js)
+
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag() {
+    //   dataLayer.push(arguments);
+    // }
+    // gtag('js', new Date());
+    // gtag('config', 'G-D3JFLYDHTJ');
+  }, []);
+
   return (
     <S.Container>
       <NextSeo
         title='Unique Blossom School'
         description='Unique Blossom Schools official site. Unique Blossom School is truly an extraordinary place of learning. Our talented staff provides each student with a rigorous standard.'
       />
+      {/* <Script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
+      ></Script> */}
 
       <HomeHero />
       <TopSection />

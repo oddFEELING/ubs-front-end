@@ -32,7 +32,16 @@ const Gallery = () => {
       offset: 0,
       disable: 'mobile',
     });
-  });
+
+    // Google tag (gtag.js)
+
+    // window.dataLayer = window.dataLayer || [];
+    // function gtag() {
+    //   dataLayer.push(arguments);
+    // }
+    // gtag('js', new Date());
+    // gtag('config', 'G-D3JFLYDHTJ');
+  }, []);
 
   return (
     <Contaoiner>
@@ -40,7 +49,16 @@ const Gallery = () => {
         title='UBS | Gallery'
         description='See us in glorious moments as we showcase some of our notable events, people, alumni and so much much!'
       />
+
+      {/* ====== lottie files script */}
       <Script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js' />
+
+      {/* ====== google analytics script */}
+      {/* <Script
+        async
+        src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
+      ></Script> */}
+
       <Hero
         title='Picture Gallery'
         desc='Capturing events in the moment'
