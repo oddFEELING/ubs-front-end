@@ -15,13 +15,15 @@ function MyApp({ Component, pageProps }) {
   const client = new QueryClient();
   const getLayout = Component.getLayout || ((page) => page);
 
-  // Google tag (gtag.js)
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-  gtag('config', 'G-D3JFLYDHTJ');
+  useEffect(() => {
+    // Google tag (gtag.js)
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-D3JFLYDHTJ');
+  }, []);
 
   return (
     <QueryClientProvider client={client}>
