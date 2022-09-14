@@ -16,15 +16,7 @@ function MyApp({ Component, pageProps }) {
   const client = new QueryClient();
   const getLayout = Component.getLayout || ((page) => page);
 
-  useEffect(() => {
-    // Google tag (gtag.js)
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-    gtag('config', 'G-D3JFLYDHTJ');
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <QueryClientProvider client={client}>
@@ -32,8 +24,14 @@ function MyApp({ Component, pageProps }) {
         {/* ====== google analytics script */}
         <Script
           async
+          strategy='lazyOnload'
           src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
         ></Script>
+        <Script async strategy='lazyOnload'>
+          (gtag.js) window.dataLayer = window.dataLayer || []; function gtag(){' '}
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-D3JFLYDHTJ')
+        </Script>
         <DefaultSeo {...Seo} />
         {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>
