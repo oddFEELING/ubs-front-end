@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import AOS from 'aos';
+import Script from 'next/script';
 import { NextSeo } from 'next-seo';
 import Hero from '../../components/lib/hero/Hero.component';
 import AppLayout from '../../layout/AppLayout';
