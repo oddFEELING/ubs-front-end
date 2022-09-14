@@ -5,7 +5,17 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang='en'>
-        <Head></Head>
+        <Head>
+          <script
+            async
+            src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
+          ></script>
+          <script>
+            window.dataLayer = window.dataLayer || []; function gtag()
+            {dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config', 'G-D3JFLYDHTJ');
+          </script>
+        </Head>
         <body>
           <Main />
           <NextScript />
