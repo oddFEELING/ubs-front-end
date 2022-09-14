@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import 'swiper/css/bundle';
 import '../styles/globals.css';
 import Script from 'next/script';
+import { useEffect } from 'react';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'styled-components';
 import ThemeObj from '../assets/theme/theme.object';
