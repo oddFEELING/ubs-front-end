@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { css } from 'styled-components';
-import { galleryStore } from '../../../context/gallery.context';
+import { galleryStore } from '../../../global/gallery.global';
 
 //=============================================>  RENDER
 const TagComponent = ({ text }) => {

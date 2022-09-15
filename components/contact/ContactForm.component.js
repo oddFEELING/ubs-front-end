@@ -4,10 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useTheme } from 'styled-components';
 import Button from '../lib/button/Button.component';
-import { MailIcon } from '@heroicons/react/solid';
-import { UserIcon } from '@heroicons/react/solid';
-import { AnnotationIcon } from '@heroicons/react/solid';
-import { FlagIcon } from '@heroicons/react/solid';
+import { EnvelopeIcon, UserIcon, FlagIcon } from '@heroicons/react/24/solid';
 import useFetch from '../../hooks/useFetch';
 import axios from 'axios';
 import { useQuery } from 'react-query';
@@ -77,7 +74,10 @@ const ContactFormComponent = () => {
         </label>
         <div className='mt-1 relative rounded-md shadow-sm'>
           <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-            <MailIcon className='h-5 w-5 text-gray-400' aria-hidden='true' />
+            <EnvelopeIcon
+              className='h-5 w-5 text-gray-400'
+              aria-hidden='true'
+            />
           </div>
           <input
             type='contact'

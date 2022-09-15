@@ -54,6 +54,4 @@ const Blog = () => {
 
 export default Blog;
 
-Blog.getLayout = (page) => {
-  return <AppLayout>{page}</AppLayout>;
-};
+Blog.layout = AppLayout;

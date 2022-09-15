@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import useMobile from '../../../hooks/useMobile';
-import { galleryStore } from '../../../context/gallery.context';
+import { galleryStore } from '../../../global/gallery.global';
 import { ImageData } from '../../../data/gallery.data';
 import React, { useEffect, useState } from 'react';
 import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';

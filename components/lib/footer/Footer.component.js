@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import Mailchimp from '../mailchimp/Mailchimp.component';
-import { elementsStore } from '../../../context/element.context';
+import { elementsStore } from '../../../global/element.global';
 import { navigation } from '../../../data/footer.data';
 
 export default function Footer() {

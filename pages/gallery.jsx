@@ -5,7 +5,7 @@ import Script from 'next/script';
 import { NextSeo } from 'next-seo';
 import React, { useEffect } from 'react';
 import Hero from '../components/lib/hero/Hero.component';
-import { galleryStore } from '../context/gallery.context';
+import { galleryStore } from '../global/gallery.global';
 import TagComponent from '../components/lib/tag/Tag.component';
 import BoothComponent from '../components/gallery/photobooth/Booth.component';
 import {
@@ -87,6 +87,4 @@ const Gallery = () => {
 
 export default Gallery;
 
-Gallery.getLayout = (page) => {
-  return <AppLayout> {page}</AppLayout>;
-};
+Gallery.layout = AppLayout;

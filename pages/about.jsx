@@ -66,6 +66,4 @@ const About = () => {
 
 export default About;
 
-About.getLayout = (page) => {
-  return <AppLayout>{page}</AppLayout>;
-};
+About.layout = AppLayout;

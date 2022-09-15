@@ -13,7 +13,7 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
 function MyApp({ Component, pageProps }) {
   const client = new QueryClient();
-  const getLayout = Component.getLayout || ((page) => page);
+  const Layout = Component.layout || (({ children }) => <>{children}</>);
 
   useEffect(() => {}, []);
 
@@ -21,7 +21,9 @@ function MyApp({ Component, pageProps }) {
     <QueryClientProvider client={client}>
       <ThemeProvider theme={ThemeObj}>
         <DefaultSeo {...Seo} />
-        {getLayout(<Component {...pageProps} />)}
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { elementsStore } from '../../../../context/element.context';
+import { elementsStore } from '../../../../global/element.global';
 import Button from '../../../lib/button/Button.component';
 
 //=============================================>  COMPONENT

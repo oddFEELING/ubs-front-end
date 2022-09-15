@@ -1,10 +1,10 @@
 /** 🌹oddFEELING */
 
 import { useEffect, useState } from 'react';
-import { messages } from '../../data/admin/message.data';
+import { messages } from '../../../data/admin/message.data';
 import MessageModal from './MessageModal.component';
-import { TrashIcon } from '@heroicons/react/outline';
-import useFetch from '../../hooks/useFetch';
+import { TrashIcon } from '@heroicons/react/24/outline';
+import useFetch from '../../../hooks/useFetch';
 import axios from 'axios';
 
 export default function Example() {

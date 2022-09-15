@@ -60,6 +60,4 @@ export default function Home() {
   );
 }
 
-Home.getLayout = (page) => {
-  return <AppLayout>{page}</AppLayout>;
-};
+Home.layout = AppLayout;

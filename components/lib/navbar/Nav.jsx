@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import useScroll from '../../../hooks/useScroll';
 import { Nav_Links } from '../../../data/nav.data';
 import logoImg from '../../../assets/images/logo/logo.jpg';
-import { MenuAlt3Icon, RewindIcon } from '@heroicons/react/outline';
+import { Bars3Icon, BackwardIcon } from '@heroicons/react/24/outline';
 
 //=============================================>  COMPONENT
 const Nav = () => {
@@ -77,7 +77,7 @@ const Nav = () => {
         }`}
         onClick={() => setIsOpen((state) => !state)}
       >
-        <MenuAlt3Icon
+        <Bars3Icon
           className={`w-2/3 h-2/3  ${
             scrolled ? `text-gray-700` : `text-gray-100`
           }`}
@@ -95,7 +95,7 @@ const Nav = () => {
         <h2 className='top-[5%] left-[5%]  absolute font-primary text-gray-50 font-black text-3xl'>
           U B S
         </h2>
-        <RewindIcon
+        <BackwardIcon
           icon='akar-icons:arrow-right-thick'
           height='35'
           className='absolute top-[5%] right-[8%] w-14 h-12 text-orange-400 cursor-pointer rotate-180 hover:translate-x-1 transition-all duration-300'
@@ -107,7 +107,7 @@ const Nav = () => {
           return (
             <Link href={data.link} key={index} passHref>
               <a
-                className={`text-5xl font-secondary font-light  text-md hover:text-indigo-300 transition-all ${
+                className={`text-4xl font-secondary font-light  text-md hover:text-indigo-300 transition-all ${
                   router.pathname.indexOf(data.select) !== -1
                     ? ` text-indigo-500 font-bold`
                     : ` text-gray-300`

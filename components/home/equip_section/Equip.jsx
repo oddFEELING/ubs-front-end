@@ -5,7 +5,7 @@ import EquipImg from '../../../assets/images/hero/equip-img.webp';
 import Shape_1 from '../../../assets/images/common/shape-1.svg';
 import Shape_2 from '../../../assets/images/common/shape-2.svg';
 import { useTheme } from 'styled-components';
-import { elementsStore } from '../../../context/element.context';
+import { elementsStore } from '../../../global/element.global';
 import Image from 'next/image';
 import {
   Container,

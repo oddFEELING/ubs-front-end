@@ -55,6 +55,4 @@ const Contact = () => {
 
 export default Contact;
 
-Contact.getLayout = (page) => {
-  return <AppLayout>{page}</AppLayout>;
-};
+Contact.layout = AppLayout;
