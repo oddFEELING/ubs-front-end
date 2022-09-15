@@ -4,18 +4,11 @@ import AOS from 'aos';
 import Script from 'next/script';
 import { NextSeo } from 'next-seo';
 import React, { useEffect } from 'react';
-import AppLayout from '../layout/AppLayout';
-import { Container } from '../styles/login.component';
-import ErrorComponent from '../components/lib/error/Error.component';
+import { Container } from '../../styles/login.component';
+import PortalComponent from '../../components/portal/portal.component';
 
-const Login = () => {
+const Portal = () => {
   useEffect(() => {
-    setTimeout(() => {
-      alert(
-        'We are currently working on this page. Click on the UBS logo to go home'
-      );
-    }, 1500);
-
     AOS.init(
       {
         delay: 0,
@@ -50,13 +43,9 @@ const Login = () => {
       <h1 style={{ position: 'absolute  ' }}>
         Login page coming soon...Try again later
       </h1>
-      <ErrorComponent />
+      <PortalComponent />
     </Container>
   );
 };
 
-export default Login;
-
-Login.getLayout = (page) => {
-  return <AppLayout>{page}</AppLayout>;
-};
+export default Portal;
