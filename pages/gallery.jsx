@@ -4,19 +4,15 @@ import AOS from 'aos';
 import Script from 'next/script';
 import { NextSeo } from 'next-seo';
 import React, { useEffect } from 'react';
+import useFetch from '../hooks/useFetch';
+import AppLayout from '../layout/AppLayout';
 import Hero from '../components/lib/hero/Hero.component';
 import { galleryStore } from '../global/gallery.global';
 import TagComponent from '../components/lib/tag/Tag.component';
 import BoothComponent from '../components/landing/gallery/photobooth/Booth.component';
-import {
-  Contaoiner,
-  GalleryWrapper,
-  TagWrapper,
-} from '../styles/Gallery.component';
+import { Contaoiner, GalleryWrapper } from '../styles/Gallery.component';
 import LoaderComponent from '../components/lib/loader/Loader.component';
 import ErrorComponent from '../components/lib/error/Error.component';
-import useFetch from '../hooks/useFetch';
-import AppLayout from '../layout/AppLayout';
 
 const Gallery = () => {
   const { selected } = galleryStore();
@@ -32,7 +28,9 @@ const Gallery = () => {
       offset: 0,
       disable: 'mobile',
     });
+  });
 
+  useEffect(() => {
     // Google tag (gtag.js)
 
     window.dataLayer = window.dataLayer || [];
