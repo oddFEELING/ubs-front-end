@@ -18,7 +18,6 @@ export const GalleryWrapper = styled.section`
   padding: 50px 4px;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
 
   h1 {
     font-weight: 700;

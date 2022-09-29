@@ -7,7 +7,7 @@ import React, { useEffect } from 'react';
 import Hero from '../components/lib/hero/Hero.component';
 import { galleryStore } from '../global/gallery.global';
 import TagComponent from '../components/lib/tag/Tag.component';
-import BoothComponent from '../components/gallery/photobooth/Booth.component';
+import BoothComponent from '../components/landing/gallery/photobooth/Booth.component';
 import {
   Contaoiner,
   GalleryWrapper,
@@ -67,15 +67,17 @@ const Gallery = () => {
         btn_2_txt='Admission'
         img='/gallery/gallery-hero.webp'
       />
+
       <GalleryWrapper>
         <h1>Image categories</h1>
-        <TagWrapper>
+
+        <div className='gap-4 grid grid-cols-4 items-center justify-center justify-items-center max-w-[80%] py-[10px] mb-16'>
           <TagComponent text='all' />
           {Categories &&
             Categories.data.data.map((tag, index) => {
               return <TagComponent text={tag.attributes.Title} key={index} />;
             })}
-        </TagWrapper>
+        </div>
 
         {isSuccess && <BoothComponent images={Images} />}
         {isLoading && <LoaderComponent />}

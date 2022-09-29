@@ -38,6 +38,7 @@ const useFetch = (target, payload) => {
           )
       ));
 
+    //=============================================>  ## MESSAGES
     // ======= post a message -->
     case 'get-messages':
       return (Query = useQuery(
@@ -47,7 +48,55 @@ const useFetch = (target, payload) => {
             headers: {
               authorization: `BEARER ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
             },
-          })
+          }),
+        {
+          refetchInterval: 5000,
+          staleTime: 5000,
+        }
+      ));
+
+    // ======= mark a message as read -->
+    case 'mark-message-read':
+      return (Query = useQuery(
+        'set-message-read',
+        async () =>
+          await axios.patch(
+            `https://ubs-server.herokuapp.com/messages/${payload && payload}`,
+            { status: 'read' },
+            {
+              headers: {
+                authorization: `BEARER ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
+              },
+            }
+          ),
+        {
+          enabled: false,
+          refetchOnWindowFocus: false,
+          refetchOnMount: false,
+          refetchOnReconnect: false,
+        }
+      ));
+
+    // ======= mark all message as read -->
+    case 'mark-single-message-read':
+      return (Query = useQuery(
+        'set-message-read',
+        async () =>
+          await axios.patch(
+            `https://ubs-server.herokuapp.com/messages`,
+            { status: 'read' },
+            {
+              headers: {
+                authorization: `BEARER ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
+              },
+            }
+          ),
+        {
+          enabled: false,
+          refetchOnWindowFocus: false,
+          refetchOnMount: false,
+          refetchOnReconnect: false,
+        }
       ));
 
     default:

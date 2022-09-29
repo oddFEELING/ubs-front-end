@@ -6,7 +6,7 @@ import Script from 'next/script';
 import { NextSeo } from 'next-seo';
 import Hero from '../../components/lib/hero/Hero.component';
 import AppLayout from '../../layout/AppLayout';
-import Latest from '../../components/blog/Latest.component';
+import Latest from '../../components/landing/blog/Latest.component';
 
 const Blog = () => {
   useEffect(() => {

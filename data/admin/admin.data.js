@@ -1,10 +1,11 @@
 import {
-  HomeIcon,
-  UserGroupIcon,
-  MegaphoneIcon,
-  UsersIcon,
   MapIcon,
   CogIcon,
+  HomeIcon,
+  UsersIcon,
+  AcademicCapIcon,
+  MegaphoneIcon,
+  UserGroupIcon,
 } from '@heroicons/react/24/outline';
 
 export const navigation = [
@@ -22,6 +23,11 @@ export const navigation = [
     name: 'Students',
     href: 'students',
     icon: UserGroupIcon,
+  },
+  {
+    name: 'Classes',
+    href: 'classes',
+    icon: AcademicCapIcon,
   },
   {
     name: 'Notifications',

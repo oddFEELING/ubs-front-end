@@ -8,9 +8,9 @@ import React, { useEffect } from 'react';
 import AppLayout from '../layout/AppLayout';
 import { MainBody } from '../styles/about/about.component';
 import Hero from '../components/lib/hero/Hero.component';
-import Main from '../components/about/main/Main.component';
-import ValueComponent from '../components/about/value/Value.component';
-import ExecutiveComponent from '../components/about/executive/Executive.component';
+import Main from '../components/landing/about/main/Main.component';
+import ValueComponent from '../components/landing/about/value/Value.component';
+import ExecutiveComponent from '../components/landing/about/executive/Executive.component';
 
 const About = () => {
   useEffect(() => {

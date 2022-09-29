@@ -7,7 +7,7 @@ import React, { useEffect } from 'react';
 import AppLayout from '../layout/AppLayout';
 import * as S from '../styles/Contact.component';
 import Hero from '../components/lib/hero/Hero.component';
-import ContactCardComponent from '../components/contact/ContactCard.component';
+import ContactCardComponent from '../components/landing/contact/ContactCard.component';
 
 const Contact = () => {
   useEffect(() => {

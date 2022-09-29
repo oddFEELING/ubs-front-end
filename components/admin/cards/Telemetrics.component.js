@@ -2,35 +2,43 @@
 import React from 'react';
 
 import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/20/solid';
-import {
-  CursorArrowRaysIcon,
-  EnvelopeOpenIcon,
-  UsersIcon,
-} from '@heroicons/react/24/outline';
+import { UserGroupIcon, UsersIcon } from '@heroicons/react/24/outline';
 
 const stats = [
   {
     id: 1,
-    name: 'Total Subscribers',
+    name: 'Total Students',
     stat: '71,897',
-    icon: UsersIcon,
+    icon: UserGroupIcon,
     change: '122',
+    href: 'students',
     changeType: 'increase',
   },
   {
     id: 2,
-    name: 'Avg. Open Rate',
+    name: 'Total Staff',
     stat: '58.16%',
     icon: UsersIcon,
     change: '5.4%',
+    href: 'staff',
     changeType: 'increase',
   },
   {
     id: 3,
-    name: 'Avg. Click Rate',
+    name: 'Total classes',
     stat: '24.57%',
     icon: UsersIcon,
     change: '3.2%',
+    href: 'reports',
+    changeType: 'decrease',
+  },
+  {
+    id: 4,
+    name: 'Reports',
+    stat: '24.57%',
+    icon: UsersIcon,
+    change: '3.2%',
+    href: 'reports',
     changeType: 'decrease',
   },
 ];
@@ -43,14 +51,14 @@ const Telemetrics = () => {
   return (
     <div>
       <h3 className='text-lg font-medium leading-6 text-gray-900'>
-        Last 30 days
+        From last session
       </h3>
 
       <dl className='mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>
         {stats.map((item) => (
           <div
             key={item.id}
-            className='relative overflow-hidden rounded-lg bg-white px-4 pt-5 pb-12 shadow sm:px-6 sm:pt-6'
+            className='relative overflow-hidden rounded-lg bg-white px-4 pt-5 pb-12 shadow-md sm:px-6 sm:pt-6'
           >
             <dt>
               <div className='absolute rounded-md bg-indigo-500 p-3'>
@@ -85,21 +93,17 @@ const Telemetrics = () => {
                 )}
 
                 <span className='sr-only'>
-                  {' '}
-                  {item.changeType === 'increase'
-                    ? 'Increased'
-                    : 'Decreased'}{' '}
-                  by{' '}
+                  {item.changeType === 'increase' ? 'Increased' : 'Decreased'}
+                  by
                 </span>
                 {item.change}
               </p>
               <div className='absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6'>
                 <div className='text-sm'>
                   <a
-                    href='#'
+                    href={item.href}
                     className='font-medium text-indigo-600 hover:text-indigo-500'
                   >
-                    {' '}
                     View all<span className='sr-only'> {item.name} stats</span>
                   </a>
                 </div>

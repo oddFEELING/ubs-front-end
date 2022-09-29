@@ -16,7 +16,7 @@ export default function AdminLayout({ children }) {
 
   return (
     <>
-      <div className='overflow-hidden'>
+      <div className='overflow-hidden bg-gray-100 min-h-screen'>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
             as='div'
@@ -192,7 +192,6 @@ export default function AdminLayout({ children }) {
           </div>
         </div>
 
-        {/* ====== comment here */}
         <div className='md:pl-64 flex flex-col flex-1'>
           <div className='sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-100'>
             <button
@@ -206,8 +205,8 @@ export default function AdminLayout({ children }) {
           </div>
           <main className='flex-1'>
             <div className='py-6'>
-              <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                <h1 className='text-2xl font-semibold text-gray-900'>
+              <div className='max-w-7xl py-8 bg-gray-800 mx-auto px-4 sm:px-6 lg:px-8'>
+                <h1 className='text-2xl font-semibold text-gray-100'>
                   Admin Dashboard
                 </h1>
               </div>
