@@ -31,7 +31,7 @@ const BoothComponent = ({ images }) => {
   }, [mobile]);
 
   // ======= check the images passed through -->
-  let newImages = images && setNewImages(images.data.data);
+  let newImages = images && images.data.data;
 
   return (
     <ImageList
