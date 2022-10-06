@@ -10,7 +10,6 @@ import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 const BoothComponent = ({ images }) => {
   const mobile = useMobile();
   const { selected } = galleryStore();
-  const [newImages, setNewImages] = useState([]);
   const [ListProps, setListProps] = useState({
     style: { width: '90%', overflow: 'hidden' },
     cols: 4,
@@ -32,9 +31,7 @@ const BoothComponent = ({ images }) => {
   }, [mobile]);
 
   // ======= check the images passed through -->
-  useEffect(() => {
-    images && setNewImages(images.data.data);
-  }, [images]);
+  let newImages = images && setNewImages(images.data.data);
 
   return (
     <ImageList
