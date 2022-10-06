@@ -8,7 +8,7 @@ const NewLoader = () => {
   return (
     <div>
       <Player
-        className='w-full h-full'
+        className='w-full h-full max-w-[200px] max-h-[200px]'
         loop
         src='https://assets8.lottiefiles.com/packages/lf20_a2chheio.json'
         autoplay
