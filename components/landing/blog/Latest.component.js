@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import useFetch from '../../../hooks/useFetch';
 import React, { useEffect, useState } from 'react';
-import { BlogLatest } from '../../../data/blog.data';
+import NewLoader from '../../lib/loader/NewLoader.component';
 
 export default function Latest() {
   const [posts, setPosts] = useState([]);
@@ -11,7 +11,6 @@ export default function Latest() {
   useEffect(() => {
     if (isSuccess) {
       setPosts(data.data.data);
-      console.log(posts);
     }
   }, [status, data, isLoading]);
 
@@ -31,12 +30,13 @@ export default function Latest() {
           </p>
         </div>
         <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
+          {isLoading && <NewLoader />}
           {posts.map((post, index) => (
             <div
               key={index}
               className='flex flex-col rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl border'
             >
-              <div className='flex-shrink-0 relative h-60 w-full shadow-sm border border'>
+              <div className='flex-shrink-0 relative h-60 w-full shadow-sm border '>
                 <Image
                   className='h-48 w-full object-cover'
                   src={post.attributes.image.data.attributes.url}
@@ -64,24 +64,7 @@ export default function Latest() {
                   </Link>
                 </div>
                 <div className='mt-6 flex items-center'>
-                  <div className='flex-shrink-0'>
-                    <a href={post.author?.href}>
-                      <span className=' sr-only'>
-                        {post.attributes?.Author.data.attributes.firstname}
-                        &nbsp;
-                        {post.attributes?.Author.data.attributes.lastname}
-                      </span>
-                      <Image
-                        className='h-10 w-10 rounded-full'
-                        src='https://images.unsplash.com/photo-1517673132405-a56a62b18caf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YWNhZGVtaWNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
-                        alt=''
-                        height={40}
-                        width={40}
-                        layout='intrinsic'
-                      />
-                    </a>
-                  </div>
-                  <div className='ml-3'>
+                  <div>
                     <p className='text-sm font-medium  text-color-5'>
                       {post.attributes?.Author.data.attributes.firstname}
                       &nbsp;

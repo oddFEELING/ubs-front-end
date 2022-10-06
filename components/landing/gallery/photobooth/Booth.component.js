@@ -1,10 +1,8 @@
 /** 🌹oddFEELING */
 
 import Image from 'next/image';
-import styled from 'styled-components';
 import React, { useEffect, useState } from 'react';
 import useMobile from '../../../../hooks/useMobile';
-import { ImageData } from '../../../../data/gallery.data';
 import { galleryStore } from '../../../../global/gallery.global';
 import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 
@@ -12,6 +10,7 @@ import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
 const BoothComponent = ({ images }) => {
   const mobile = useMobile();
   const { selected } = galleryStore();
+  const [newImages, setNewImages] = useState([]);
   const [ListProps, setListProps] = useState({
     style: { width: '90%', overflow: 'hidden' },
     cols: 4,
@@ -33,8 +32,10 @@ const BoothComponent = ({ images }) => {
   }, [mobile]);
 
   // ======= check the images passed through -->
-  let newImages = images && images.data.data;
-  console.log(newImages[0]);
+  useEffect(() => {
+    images && setNewImages(images.data.data);
+  }, [images]);
+
   return (
     <ImageList
       sx={{ ...ListProps.style }}

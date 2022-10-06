@@ -19,7 +19,6 @@ const Post = () => {
   /* ====== watch for data changes */
   useEffect(() => {
     isSuccess && setPostData(data.data.data);
-    console.log(postData);
   }, [data, status]);
 
   return (
@@ -40,7 +39,7 @@ const Post = () => {
           {postData.attributes?.Title}
         </h1>
         <div className=''>
-          <h3 className='text-gray-100/80 text-lg font-medium font-secondary '>
+          <h3 className='text-gray-100/80 text-sm lg:text-lg font-medium font-secondary '>
             Author: &nbsp;
             <b>
               {postData.attributes?.Author.data.attributes.firstname} &nbsp;
@@ -64,7 +63,7 @@ const Post = () => {
       {/* ====== post content */}
       <article className='flex h-auto py-32 px-10 rounded-2xl shadow-2xl mb-24 bg-gradient-to-b from-indigo-50 to-white w-[95%] gap-20 items-center flex-col justify-center z-20 -mt-64 lg:-mt-96 relative '>
         {isLoading && <NewLoader />}
-        <div className='w-full max-w-5xl text-gray-600 text-lg prose-h1:font-primary prose lg:prose-lg prose-p:text-gray-600 prose-h1:text-indigo-600 prose-img:shadow-xl prose-img:rounded-xl prose-h1:font-bold prose-p:font-secondary'>
+        <div className='w-full max-w-5xl text-gray-600 text-lg prose-h1:font-primary prose lg:prose-lg prose-p:text-gray-600 prose-h1:text-indigo-500 prose-h1:text-3xl prose-img:shadow-xl prose-img:rounded-xl prose-h1:font-bold prose-p:font-secondary'>
           <ReactMarkdown escapeHtml={false}>
             {postData?.attributes?.Content}
           </ReactMarkdown>

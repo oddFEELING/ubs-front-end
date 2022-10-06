@@ -31,14 +31,16 @@ const Nav = () => {
       {/* ====== logo */}
       <div className='flex cursor-pointer relative h-[50px] max-h-1/2 w-[60px] items-center justify-center'>
         <Link href='/' passHref>
-          <Image
-            src={logoImg}
-            alt=''
-            layout='fill'
-            priority
-            placeholder='blur'
-            quality={100}
-          />
+          <a>
+            <Image
+              src={logoImg}
+              alt=''
+              layout='fill'
+              priority
+              placeholder='blur'
+              quality={100}
+            />
+          </a>
         </Link>
       </div>
 
