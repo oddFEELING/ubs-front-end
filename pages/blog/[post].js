@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import ReactMarkdown from 'react-markdown';
 import useFetch from '../../hooks/useFetch';
+import Link from 'next/link';
 import Footer from '../../components/lib/footer/Footer.component';
 import React, { useEffect, useState } from 'react';
 
@@ -31,6 +32,12 @@ const Post = () => {
         //   backgroundSize: 'contain',
         // }}
       >
+        {/* ====== back button */}
+        <Link href='/blog' passHref>
+          <a className='absolute top-8 left-8  lg:left-44 text-red-400 font-bold text-sm lg:text-lg py-1 px-4 lg:6 border border-red-400 rounded-lg shadow-lg'>
+            Back
+          </a>
+        </Link>
         <h1 className='text-3xl text-white lg:text-7xl font-primary font-black '>
           {postData.attributes?.Title}
         </h1>
