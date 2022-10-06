@@ -27,6 +27,10 @@ a {
   margin: 0;
 }
 
+h1 {
+  @apply text-4xl font-bold font-primary text-gray-800;
+}
+
 @layer components {
   .newsletter__form {
     @apply gap-3 w-full h-full flex items-start justify-center flex-col;

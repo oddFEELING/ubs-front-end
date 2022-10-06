@@ -12,7 +12,7 @@ export default function Footer() {
   }, [footRef, setfooterElement]);
   return (
     <footer
-      className='bg-color-4'
+      className='bg-color-4 w-full'
       aria-labelledby='footer-heading'
       ref={footRef}
     >

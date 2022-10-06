@@ -99,6 +99,37 @@ const useFetch = (target, payload) => {
         }
       ));
 
+    //=============================================>  ## BLOG POSTS
+    /* ====== Get all blog posts */
+    case 'get-blog':
+      return (Query = useQuery(
+        'get-blog',
+        async () =>
+          await axios.get(
+            'https://ubs-cms-strapi.herokuapp.com/api/posts/?populate=*',
+            {
+              headers: {
+                authorization: `BEARER ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
+              },
+            }
+          )
+      ));
+
+    /* ====== get single post  */
+    case 'get-single-post':
+      return (Query = useQuery(
+        'get-single-post',
+        async () =>
+          await axios.get(
+            `https://ubs-cms-strapi.herokuapp.com/api/posts/${payload}?populate=*`,
+            {
+              headers: {
+                authorization: `BEARER ${process.env.NEXT_PUBLIC_STRAPI_API_TOKEN}`,
+              },
+            }
+          )
+      ));
+
     default:
       break;
   }
