@@ -40,8 +40,8 @@ const Portal = () => {
       details.password === 'student' &&
       router.push('portal/dashboard');
 
-    (details.username !== 'student') |
-      (details.password !== 'student' && alert('Wrong credentials'));
+    (details.username !== 'student') | (details.password !== 'student') &&
+      alert('Wrong credentials');
   };
 
   return (

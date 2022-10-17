@@ -63,8 +63,11 @@ const ProfileInfoCard = () => {
             <BookmarkIcon className='portal__card-icon' /> Subjects taken
           </p>
           <span className='w-full flex flex-wrap gap-2'>
-            {subjects.map((item) => (
-              <p className='py-1 px-2 border rounded-md w-max shadow-md border-gray-400 font-secondary text-gray-600'>
+            {subjects.map((item, index) => (
+              <p
+                className='py-1 px-2 border rounded-md w-max shadow-md border-gray-400 font-secondary text-gray-600'
+                key={index}
+              >
                 {item}
               </p>
             ))}
