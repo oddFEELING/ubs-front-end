@@ -1,8 +1,8 @@
 /** 🌹oddFEELING */
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import Link from 'next/link';
 import Script from 'next/script';
-import { useEffect } from 'react';
 import { NextSeo } from 'next-seo';
 import styled from 'styled-components';
 
@@ -39,6 +39,11 @@ const NotFound = () => {
       ></Script>
 
       <h1>Page Not Found</h1>
+      <Link href='/' passHref>
+        <a className='py-1 px-5 absolute z-40 border-2 rounded-md shadow-lg border-color-5 hover:border-color-2 hover:text-color-2 transoition-all duration-300 text-xl top-10 text-color-5 font-medium hover:shadow-xl'>
+          Back to safety
+        </a>
+      </Link>
       <lottie-player
         src='https://assets3.lottiefiles.com/packages/lf20_kcsr6fcp.json'
         background='white'

@@ -69,4 +69,18 @@ h1 {
   .nav__link-after {
     @apply after:absolute after:w-0 after:h-[2px] after:-bottom-1 after:left-0 hover:after:w-full after:duration-300 after:transition-all;
   }
+
+  /* ### PORTAL SECTION COMPONENTS ### */
+
+  .portal__card-title {
+    @apply text-xl lg:text-3xl font-bold font-primary;
+  }
+
+  .portal__card-icon {
+    @apply w-4 h-4;
+  }
+
+  .portal__card-p {
+    @apply flex gap-1 items-center font-secondary;
+  }
 }
