@@ -13,6 +13,7 @@ import BoothComponent from '../components/landing/gallery/photobooth/Booth.compo
 import { Contaoiner, GalleryWrapper } from '../styles/Gallery.component';
 import LoaderComponent from '../components/lib/loader/Loader.component';
 import ErrorComponent from '../components/lib/error/Error.component';
+import ImagePopover from '../components/landing/gallery/popovers/Image.popover';
 
 const Gallery = () => {
   const { selected } = galleryStore();
@@ -65,7 +66,6 @@ const Gallery = () => {
         btn_2_txt='Admission'
         img='/gallery/gallery-hero.webp'
       />
-
       <GalleryWrapper>
         <h1>Image categories</h1>
 

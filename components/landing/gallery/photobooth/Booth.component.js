@@ -5,11 +5,14 @@ import React, { useEffect, useState } from 'react';
 import useMobile from '../../../../hooks/useMobile';
 import { galleryStore } from '../../../../global/gallery.global';
 import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
+import ImagePopover from '../popovers/Image.popover';
 
 //=============================================>  RENDER
 const BoothComponent = ({ images }) => {
   const mobile = useMobile();
   const { selected } = galleryStore();
+  const [selectedImage, setSelectedImage] = useState('');
+  const [showImage, setShowImage] = useState(false);
   const [ListProps, setListProps] = useState({
     style: { width: '90%', overflow: 'hidden' },
     cols: 4,
@@ -40,6 +43,13 @@ const BoothComponent = ({ images }) => {
       gap={8}
       rowHeight={ListProps.rowHeight}
     >
+      {showImage && (
+        <ImagePopover
+          state={showImage}
+          setState={setShowImage}
+          image={selectedImage}
+        />
+      )}
       {images &&
         newImages.map((image, index) => {
           return (
@@ -52,6 +62,12 @@ const BoothComponent = ({ images }) => {
                   rows={image.attributes.Rows}
                   cols={image.attributes.Columns}
                   data-aos='fade-up'
+                  onClick={() => {
+                    setSelectedImage(
+                      image.attributes.Photo.data.attributes.url
+                    );
+                    setShowImage((state) => !state);
+                  }}
                 >
                   <Image
                     alt={image.img}
