@@ -68,6 +68,7 @@ const BoothComponent = ({ images }) => {
                     );
                     setShowImage((state) => !state);
                   }}
+                  className='cursor-pointer transition-all  duration-500 hover:shadow-xl hover:border-2 hover:border-color-2'
                 >
                   <Image
                     alt={image.img}

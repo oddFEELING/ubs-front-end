@@ -14,7 +14,7 @@ const ImagePopover = ({ image, state = false, setState }) => {
         className='w-full h-screen fixed top-0 bottom-0 left-0 bg-gray-500/90 z-[200] flex items-center justify-center'
       >
         <p
-          className='absolute top-8 right-10 border border-red-500 py-1 px-5 cursor-pointer rounded-md shadow-lg text-lg bg-red-500 font-medium md:right-24 hover:shadow-xl text-gray-50'
+          className='absolute top-8 right-10 border border-red-500 py-1 px-5 cursor-pointer rounded-md shadow-lg text-lg bg-red-500 font-medium md:right-24 hover:shadow-xl text-gray-50 z-50'
           onClick={() => setState((state) => !state)}
         >
           close

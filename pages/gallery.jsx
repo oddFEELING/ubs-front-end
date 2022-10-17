@@ -42,6 +42,15 @@ const Gallery = () => {
     gtag('config', 'G-D3JFLYDHTJ');
   }, []);
 
+  useEffect(() => {
+    if (localStorage.getItem('click_to_view') !== 'seen') {
+      setTimeout(() => {
+        alert('😀 Now you can click to view images');
+        localStorage.setItem('click_to_view', 'seen');
+      }, 2000);
+    }
+  }, []);
+
   return (
     <Contaoiner>
       <NextSeo
