@@ -8,3 +8,6 @@ const Notifications = () => {
 export default Notifications;
 
 Notifications.layout = PortalLayout;
+
+// no notifications lottie src
+//  https://assets1.lottiefiles.com/private_files/lf30_e3pteeho.json
