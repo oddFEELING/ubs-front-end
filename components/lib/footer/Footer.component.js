@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import Mailchimp from '../mailchimp/Mailchimp.component';
-import { elementsStore } from '../../../context/element.context';
+import { elementsStore } from '../../../global/element.global';
 import { navigation } from '../../../data/footer.data';
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
   }, [footRef, setfooterElement]);
   return (
     <footer
-      className='bg-color-4'
+      className='bg-color-4 w-full'
       aria-labelledby='footer-heading'
       ref={footRef}
     >

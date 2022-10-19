@@ -3,6 +3,7 @@
 import 'aos/dist/aos.css';
 import 'swiper/css/bundle';
 import '../styles/globals.css';
+import { useEffect } from 'react';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'styled-components';
 import ThemeObj from '../assets/theme/theme.object';
@@ -12,13 +13,17 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 
 function MyApp({ Component, pageProps }) {
   const client = new QueryClient();
-  const getLayout = Component.getLayout || ((page) => page);
+  const Layout = Component.layout || (({ children }) => <>{children}</>);
+
+  useEffect(() => {}, []);
 
   return (
     <QueryClientProvider client={client}>
       <ThemeProvider theme={ThemeObj}>
         <DefaultSeo {...Seo} />
-        {getLayout(<Component {...pageProps} />)}
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>

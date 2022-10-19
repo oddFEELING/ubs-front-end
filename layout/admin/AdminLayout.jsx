@@ -1,9 +1,10 @@
-import { Fragment, useState } from 'react';
 import Image from 'next/image';
-import LogoImg from '../../assets/images/logo/logo.jpg';
+import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import LogoImg from '../../assets/images/logo/logo.jpg';
 import { navigation } from '../../data/admin/admin.data';
+import { useRouter } from 'next/router';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
@@ -11,10 +12,11 @@ function classNames(...classes) {
 
 export default function AdminLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <>
-      <div className='overflow-hidden'>
+      <div className='overflow-hidden bg-gray-100 min-h-screen'>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
             as='div'
@@ -60,7 +62,7 @@ export default function AdminLayout({ children }) {
                         onClick={() => setSidebarOpen(false)}
                       >
                         <span className='sr-only'>Close sidebar</span>
-                        <XIcon
+                        <XMarkIcon
                           className='h-6 w-6 text-white'
                           aria-hidden='true'
                         />
@@ -147,10 +149,10 @@ export default function AdminLayout({ children }) {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current
+                      router.pathname.indexOf(item.href) !== -1
                         ? 'bg-gray-900 text-white'
                         : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                      'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
+                      'group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-all duration-300 hover:translate-x-1'
                     )}
                   >
                     <item.icon
@@ -189,6 +191,7 @@ export default function AdminLayout({ children }) {
             </div>
           </div>
         </div>
+
         <div className='md:pl-64 flex flex-col flex-1'>
           <div className='sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-100'>
             <button
@@ -197,28 +200,19 @@ export default function AdminLayout({ children }) {
               onClick={() => setSidebarOpen(true)}
             >
               <span className='sr-only'>Open sidebar</span>
-              <MenuIcon className='h-6 w-6' aria-hidden='true' />
+              <Bars3Icon className='h-6 w-6' aria-hidden='true' />
             </button>
           </div>
           <main className='flex-1'>
             <div className='py-6'>
-              <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                <h1 className='text-2xl font-semibold text-gray-900'>
+              <div className='max-w-7xl py-8 bg-gray-800 mx-auto px-4 sm:px-6 lg:px-8'>
+                <h1 className='text-2xl font-semibold text-gray-100'>
                   Admin Dashboard
                 </h1>
               </div>
               <div className='max-w-7xl mx-auto px-4 sm:px-6 md:px-8'>
                 {/* Replace with your content */}
                 <div className='py-4'>{children}</div>
-                <span className='bg-indigo-300 p-3 rounded-md  shadow-lg block'>
-                  <h2>
-                    <b>Note:</b> Other tabs don't work yet
-                  </h2>
-                  <h2>
-                    <b>Note:</b> All emails must be replied with the UBS
-                    official emailing providers
-                  </h2>
-                </span>
 
                 {/* /End replace */}
               </div>

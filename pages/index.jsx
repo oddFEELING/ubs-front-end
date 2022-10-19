@@ -4,15 +4,16 @@ import Head from 'next/head';
 import AOS from 'aos';
 import { useEffect } from 'react';
 import * as S from '../styles/Home.component';
-import HomeHero from '../components/home/hero/HomeHero';
-import TopSection from '../components/home/top_section/TopSection';
-import Equip from '../components/home/equip_section/Equip';
-import Facility from '../components/home/facility_section/Facility';
-import Offer from '../components/home/offer_section/Offer';
-import Testimony from '../components/home/testimony_section/Testimony';
-import Register from '../components/home/register/Register.component';
+import HomeHero from '../components/landing/home/hero/HomeHero';
+import TopSection from '../components/landing/home/top_section/TopSection';
+import Equip from '../components/landing/home/equip_section/Equip';
+import Facility from '../components/landing/home/facility_section/Facility';
+import Offer from '../components/landing/home/offer_section/Offer';
+import Testimony from '../components/landing/home/testimony_section/Testimony';
+import Register from '../components/landing/home/register/Register.component';
 import AppLayout from '../layout/AppLayout';
 import { NextSeo } from 'next-seo';
+import Script from 'next/script';
 
 //=============================================>  COMPONENT
 export default function Home() {
@@ -25,13 +26,28 @@ export default function Home() {
       duration: 800,
       disable: 'phone',
     });
-  });
+
+    // Google tag (gtag.js)
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-D3JFLYDHTJ');
+  }, []);
+
   return (
     <S.Container>
       <NextSeo
         title='Unique Blossom School'
         description='Unique Blossom Schools official site. Unique Blossom School is truly an extraordinary place of learning. Our talented staff provides each student with a rigorous standard.'
       />
+      <Script
+        async
+        strategy='lazyOnload'
+        src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
+      ></Script>
 
       <HomeHero />
       <TopSection />
@@ -44,6 +60,4 @@ export default function Home() {
   );
 }
 
-Home.getLayout = (page) => {
-  return <AppLayout>{page}</AppLayout>;
-};
+Home.layout = AppLayout;

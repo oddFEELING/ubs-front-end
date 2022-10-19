@@ -27,8 +27,8 @@ export const Nav_Links = [
     link: `/contact`,
   },
   {
-    text: `Login`,
-    select: `login`,
-    link: `/login`,
+    text: `Portal`,
+    select: `portal`,
+    link: `/portal`,
   },
 ];

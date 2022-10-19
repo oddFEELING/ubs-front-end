@@ -1,9 +1,7 @@
 /** 🌹oddFEELING */
 
 import React from 'react';
-import styled from 'styled-components';
-import { css } from 'styled-components';
-import { galleryStore } from '../../../context/gallery.context';
+import { galleryStore } from '../../../global/gallery.global';
 
 //=============================================>  RENDER
 const TagComponent = ({ text }) => {
@@ -15,43 +13,17 @@ const TagComponent = ({ text }) => {
   };
 
   return (
-    <Container
+    <span
+      className={`col-span-2 lg:col-span-1 w-[150px] h-[50px] flex items-center justify-center cursor-pointer font-medium text-gray-700 bg-light-100 rounded-lg text-sm font-secondary border transition-all duration-300 border-gray-400 hover:shadow-lg ${
+        selected === text && `bg-[#393939] text-light-200`
+      }`}
       data-aos='slide-up'
       selected={selected === text ? true : false}
       onClick={handleClick}
     >
       {text.toUpperCase()}
-    </Container>
+    </span>
   );
 };
 
 export default TagComponent;
-
-//=============================================>  COMPONENT
-const Container = styled.div`
-  width: 150px;
-  height: 50px;
-  display: flex;
-  cursor: pointer;
-  font-weight: 500;
-  border-radius: 5px;
-  align-items: center;
-  border: thin solid #d0d0d0;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.colors.lt_1};
-  font-family: ${({ theme }) => theme.fonts.sec};
-  font-size: ${({ theme }) => theme.fonts.size.sm};
-  transition: ${({ theme }) => theme.transition.smooth};
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: ${({ theme }) => theme.shadow.sd_2};
-  }
-
-  ${({ selected }) =>
-    selected === true &&
-    css`
-      background-color: ${({ theme }) => theme.colors.dk_2};
-      color: ${({ theme }) => theme.colors.lt_2};
-    `}
-`;

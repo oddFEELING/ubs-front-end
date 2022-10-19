@@ -1,19 +1,47 @@
 import {
-  HomeIcon,
-  CalendarIcon,
-  UserGroupIcon,
-  SearchCircleIcon,
-  SpeakerphoneIcon,
   MapIcon,
   CogIcon,
-} from '@heroicons/react/outline';
+  HomeIcon,
+  UsersIcon,
+  AcademicCapIcon,
+  MegaphoneIcon,
+  UserGroupIcon,
+} from '@heroicons/react/24/outline';
 
 export const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Students', href: '#', icon: UserGroupIcon, current: false },
-  { name: 'Departments', href: '#', icon: SearchCircleIcon, current: false },
-  { name: 'Announcements', href: '#', icon: SpeakerphoneIcon, current: false },
-  { name: 'Staff', href: '#', icon: MapIcon, current: false },
-  { name: 'Settings', href: '#', icon: CogIcon, current: false },
+  {
+    name: 'Dashboard',
+    href: 'dashboard',
+    icon: HomeIcon,
+  },
+  {
+    name: 'Staff',
+    href: 'staff',
+    icon: UsersIcon,
+  },
+  {
+    name: 'Students',
+    href: 'students',
+    icon: UserGroupIcon,
+  },
+  {
+    name: 'Classes',
+    href: 'classes',
+    icon: AcademicCapIcon,
+  },
+  {
+    name: 'Notifications',
+    href: 'notifications',
+    icon: MegaphoneIcon,
+  },
+  {
+    name: 'Reports',
+    href: 'reports',
+    icon: MapIcon,
+  },
+  {
+    name: 'Settings',
+    href: 'settings',
+    icon: CogIcon,
+  },
 ];
