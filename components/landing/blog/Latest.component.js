@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import useFetch from '../../../hooks/useFetch';
 import React, { useEffect, useState } from 'react';
-import NewLoader from '../../lib/loader/NewLoader.component';
+import Loader from '../../lib/loader/Loader.component';
 
 export default function Latest() {
   const [posts, setPosts] = useState([]);
@@ -30,7 +30,7 @@ export default function Latest() {
           </p>
         </div>
         <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
-          {isLoading && <NewLoader />}
+          {isLoading && <Loader />}
           {posts.map((post, index) => (
             <div
               key={index}

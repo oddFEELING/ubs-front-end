@@ -6,7 +6,7 @@ import MessageModal from './MessageModal.component';
 import { TrashIcon } from '@heroicons/react/24/outline';
 import useFetch from '../../../hooks/useFetch';
 import axios from 'axios';
-import NewLoader from '../../lib/loader/NewLoader.component';
+import Loader from '../../lib/loader/Loader.component';
 
 export default function Example() {
   const [msgOpen, setMsgOpen] = useState(false);
@@ -68,7 +68,7 @@ export default function Example() {
       {/* ====== loading state */}
       {isLoading && (
         <div className='w-36 h-36 self-center'>
-          <NewLoader />
+          <Loader />
         </div>
       )}
 

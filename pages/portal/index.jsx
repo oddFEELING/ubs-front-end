@@ -54,10 +54,6 @@ const Portal = () => {
         src='https://www.googletagmanager.com/gtag/js?id=G-D3JFLYDHTJ'
       ></Script>
 
-      <h1 style={{ position: 'absolute  ' }}>
-        Login page coming soon...Try again later
-      </h1>
-
       <div className='flex min-h-full'>
         <div className='flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24'>
           {/* ====== home button */}

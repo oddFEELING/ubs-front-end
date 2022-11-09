@@ -1,38 +1,22 @@
 /** 🌹oddFEELING */
 
-import React from 'react';
-import styled from 'styled-components';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 
-//=============================================>  # RENDER
-const LoaderComponent = () => {
-  const lottieStyle = {
-    width: '150px',
-    height: '150px',
-    position: 'absolute',
-  };
+import React from 'react';
+
+const Loader = () => {
   return (
-    <COntainer>
-      <lottie-player
-        src='https://assets6.lottiefiles.com/packages/lf20_a2chheio.json'
-        background='white'
-        speed='1'
-        style={{ ...lottieStyle }}
+    <div>
+      <Player
+        className='w-16 h-16 md:w-32 md:h-32'
         loop
+        src='https://assets10.lottiefiles.com/packages/lf20_ctopYC.json'
         autoplay
-      ></lottie-player>
-      <h1>Loading...</h1>
-    </COntainer>
+      >
+        <Controls visible={false} buttons={['debug']}></Controls>
+      </Player>
+    </div>
   );
 };
 
-export default LoaderComponent;
-
-//=============================================>  # COMPONENT
-const COntainer = styled.div`
-  width: 100%;
-  height: 500px;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-`;
+export default Loader;

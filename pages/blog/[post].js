@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ReactMarkdown from 'react-markdown';
 import useFetch from '../../hooks/useFetch';
-import NewLoader from '../../components/lib/loader/NewLoader.component';
 import styled from 'styled-components';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/lib/footer/Footer.component';
+import Loader from '../../components/lib/loader/Loader.component';
 
 const Post = () => {
   const router = useRouter();
@@ -28,7 +28,7 @@ const Post = () => {
         className='flex gap-5 flex-col px-16 lg:px-56 py-32 w-full  justify-start  bg-center h-[65vh] lg:h-[70vh] min-h-[600px] relative'
         src={postData.attributes?.image.data.attributes.url}
       >
-        {isLoading && <NewLoader />}
+        {isLoading && <Loader />}
         {/* ====== back button */}
         <Link href='/blog' passHref>
           <a className='absolute top-8 left-8  lg:left-44 text-red-400 font-bold text-sm lg:text-lg py-1 px-4 lg:6 border border-red-400 rounded-lg shadow-lg'>
@@ -62,7 +62,7 @@ const Post = () => {
 
       {/* ====== post content */}
       <article className='flex h-auto py-32 px-10 rounded-2xl shadow-2xl mb-24 bg-gradient-to-b from-indigo-50 to-white w-[95%] gap-20 items-center flex-col justify-center z-20 -mt-64 lg:-mt-96 relative '>
-        {isLoading && <NewLoader />}
+        {isLoading && <Loader />}
         <div className='w-full max-w-5xl text-gray-600 text-lg prose-h1:font-primary prose lg:prose-lg prose-p:text-gray-600 prose-h1:text-indigo-500 prose-h1:text-3xl prose-img:shadow-xl prose-img:rounded-xl prose-h1:font-bold prose-p:font-secondary'>
           <ReactMarkdown escapeHtml={false}>
             {postData?.attributes?.Content}
